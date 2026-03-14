@@ -1,0 +1,1099 @@
+{
+  "schedule": [
+    {
+      "day": 1,
+      "type": "push1",
+      "label": "Push",
+      "sublabel": "Chest Emphasis",
+      "color": "#7c3aed"
+    },
+    {
+      "day": 2,
+      "type": "pull1",
+      "label": "Pull",
+      "sublabel": "Back Width",
+      "color": "#2563eb"
+    },
+    {
+      "day": 3,
+      "type": "legs1",
+      "label": "Legs",
+      "sublabel": "Quad + Core",
+      "color": "#059669"
+    },
+    {
+      "day": 4,
+      "type": "push2",
+      "label": "Push",
+      "sublabel": "Shoulder Emphasis",
+      "color": "#7c3aed"
+    },
+    {
+      "day": 5,
+      "type": "pull2",
+      "label": "Pull",
+      "sublabel": "Back Thickness",
+      "color": "#2563eb"
+    },
+    {
+      "day": 6,
+      "type": "legs2",
+      "label": "Legs",
+      "sublabel": "Hamstrings + Core",
+      "color": "#059669"
+    },
+    {
+      "day": 7,
+      "type": "rest",
+      "label": "Rest",
+      "sublabel": "Recovery",
+      "color": "#374151"
+    }
+  ],
+  "push1": {
+    "title": "Day 1 – Push",
+    "subtitle": "Chest Emphasis",
+    "purpose": "Build chest mass while training shoulders and triceps.",
+    "exercises": [
+      {
+        "name": "Barbell Bench Press",
+        "target": "Chest",
+        "sets": 4,
+        "reps": "6-8",
+        "gif": "https://i.ytimg.com/vi/SCVCLChPQFY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=SCVCLChPQFY"
+      },
+      {
+        "name": "Incline Dumbbell Press",
+        "target": "Upper Chest",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/DbFgADa2PL8/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=DbFgADa2PL8"
+      },
+      {
+        "name": "Chest Fly",
+        "target": "Chest",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/eozdVDA78K0/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=eozdVDA78K0"
+      },
+      {
+        "name": "Overhead Press",
+        "target": "Shoulders",
+        "sets": 3,
+        "reps": "6-8",
+        "gif": "https://i.ytimg.com/vi/2yjwXTZQDDI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=2yjwXTZQDDI"
+      },
+      {
+        "name": "Lateral Raises",
+        "target": "Side Delts",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/3VcKaXpzqRo/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=3VcKaXpzqRo"
+      },
+      {
+        "name": "Triceps Pushdown",
+        "target": "Triceps",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/2-LAMcpzODU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=2-LAMcpzODU"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Light Cardio (Jumping Rope / Treadmill)",
+        "duration": "5 min",
+        "note": "Raise heart rate and body temperature",
+        "gif": "https://i.ytimg.com/vi/JX3HAYG2mEU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=JX3HAYG2mEU"
+      },
+      {
+        "name": "Arm Circles",
+        "duration": "2×20 reps (each direction)",
+        "note": "Forward and backward to mobilise shoulder joint",
+        "gif": "https://i.ytimg.com/vi/lzR7tzI1JUI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=lzR7tzI1JUI"
+      },
+      {
+        "name": "Shoulder Rolls",
+        "duration": "2×20 reps",
+        "note": "Loosen upper traps and rotator cuff",
+        "gif": "https://i.ytimg.com/vi/LgPCO6RIH3Q/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=LgPCO6RIH3Q"
+      },
+      {
+        "name": "Band Pull-Aparts",
+        "duration": "2×20 reps",
+        "note": "Open chest and activate rear delts before pressing",
+        "gif": "https://i.ytimg.com/vi/QHy6QzOocbM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=QHy6QzOocbM"
+      },
+      {
+        "name": "Cat-Cow Stretch",
+        "duration": "2×10 reps",
+        "note": "Warm up thoracic spine for bench arch",
+        "gif": "https://i.ytimg.com/vi/LIVJZZyZ2qM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=LIVJZZyZ2qM"
+      }
+    ],
+    "activation": [
+      {
+        "name": "Band External Rotations",
+        "duration": "2×15/side",
+        "note": "Critical rotator cuff activation before heavy bench — prevents shoulder impingement",
+        "gif": "https://i.ytimg.com/vi/dS9ORQCnWsE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=dS9ORQCnWsE"
+      },
+      {
+        "name": "Slow Bodyweight Push-Up",
+        "duration": "2×10 reps (3s down, 1s up)",
+        "note": "Prime the chest/tricep/shoulder connection with full range of motion",
+        "gif": "https://i.ytimg.com/vi/pKZ-lkKKMws/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=pKZ-lkKKMws"
+      },
+      {
+        "name": "Ramp-Up Bench Press Sets",
+        "duration": "2 sets @ 40–60% of working weight",
+        "note": "Groove the pressing pattern before loading heavy",
+        "gif": "https://i.ytimg.com/vi/IeuxTty8vUk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=IeuxTty8vUk"
+      }
+    ],
+    "cooldown": [
+      {
+        "name": "Doorway Chest Stretch",
+        "duration": "60s each side",
+        "note": "Lengthen the pectorals after heavy pressing",
+        "gif": "https://i.ytimg.com/vi/O8rJw_TmC1Y/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=O8rJw_TmC1Y"
+      },
+      {
+        "name": "Cross-Body Shoulder Stretch",
+        "duration": "45s each side",
+        "note": "Release posterior capsule and rear delt",
+        "gif": "https://i.ytimg.com/vi/aIq0fLi8iak/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=aIq0fLi8iak"
+      },
+      {
+        "name": "Overhead Tricep Stretch",
+        "duration": "45s each side",
+        "note": "Stretch long head of triceps",
+        "gif": "https://i.ytimg.com/vi/_IOHtPSYGbk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=_IOHtPSYGbk"
+      },
+      {
+        "name": "Thoracic Extension over Foam Roller",
+        "duration": "60–90s",
+        "note": "Decompress the spine and open the chest",
+        "gif": "https://i.ytimg.com/vi/uWIJ3TJJwbQ/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=uWIJ3TJJwbQ"
+      },
+      {
+        "name": "Pec Minor Stretch (hands clasped behind back)",
+        "duration": "60s",
+        "note": "Often tight from pressing — prevent rounded shoulders",
+        "gif": "https://i.ytimg.com/vi/HmB8M3CEBCM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=HmB8M3CEBCM"
+      }
+    ]
+  },
+  "pull1": {
+    "title": "Day 2 – Pull",
+    "subtitle": "Back Width",
+    "purpose": "Develop V-taper — wide lats and rear delts.",
+    "exercises": [
+      {
+        "name": "Pull-ups / Lat Pulldown",
+        "target": "Lats",
+        "sets": 4,
+        "reps": "6-10",
+        "gif": "https://i.ytimg.com/vi/eGo4IYlbE5g/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=eGo4IYlbE5g"
+      },
+      {
+        "name": "Single Arm Dumbbell Row",
+        "target": "Back",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/pYcpY20QaE8/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=pYcpY20QaE8"
+      },
+      {
+        "name": "Seated Cable Row",
+        "target": "Mid Back",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/GZbfZ033f74/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=GZbfZ033f74"
+      },
+      {
+        "name": "Face Pulls",
+        "target": "Rear Delts",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/IeOqdw9WI90/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=IeOqdw9WI90"
+      },
+      {
+        "name": "Barbell Curl",
+        "target": "Biceps",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/kwG2ipFRgfo/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=kwG2ipFRgfo"
+      },
+      {
+        "name": "Hammer Curl",
+        "target": "Biceps/Brachialis",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/TwD-YGVP4Bk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=TwD-YGVP4Bk"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Light Cardio",
+        "duration": "5 min",
+        "note": "Get blood flowing to upper body",
+        "gif": "https://i.ytimg.com/vi/JX3HAYG2mEU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=JX3HAYG2mEU"
+      },
+      {
+        "name": "Cat-Cow",
+        "duration": "2×10 reps",
+        "note": "Mobilise thoracic spine for rowing and pulling",
+        "gif": "https://i.ytimg.com/vi/LIVJZZyZ2qM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=LIVJZZyZ2qM"
+      },
+      {
+        "name": "Thoracic Rotations (seated)",
+        "duration": "10 reps/side",
+        "note": "Unlock mid-back rotation before rows",
+        "gif": "https://i.ytimg.com/vi/VH16GqIiy7Q/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=VH16GqIiy7Q"
+      },
+      {
+        "name": "Shoulder Circles",
+        "duration": "2×20 reps",
+        "note": "Warm up glenohumeral joint",
+        "gif": "https://i.ytimg.com/vi/lzR7tzI1JUI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=lzR7tzI1JUI"
+      },
+      {
+        "name": "Band Pull-Aparts",
+        "duration": "2×20 reps",
+        "note": "Pre-activate rear delts and rhomboids",
+        "gif": "https://i.ytimg.com/vi/QHy6QzOocbM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=QHy6QzOocbM"
+      }
+    ],
+    "activation": [
+      {
+        "name": "Dead Hangs",
+        "duration": "2×30s",
+        "note": "Decompress spine, activate grip and lat engagement passively",
+        "gif": "https://i.ytimg.com/vi/Hs_2nf0C2o4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=Hs_2nf0C2o4"
+      },
+      {
+        "name": "Scapular Pull-Ups",
+        "duration": "2×10 reps",
+        "note": "Retract and depress scapula with straight arms — pure lat/trap activation",
+        "gif": "https://i.ytimg.com/vi/WqCXcFrA1Iw/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=WqCXcFrA1Iw"
+      },
+      {
+        "name": "Band Face Pulls",
+        "duration": "2×20 reps",
+        "note": "Activate rear delts and external rotators before rows",
+        "gif": "https://i.ytimg.com/vi/IeOqdw9WI90/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=IeOqdw9WI90"
+      },
+      {
+        "name": "Light Lat Pulldown (40% weight)",
+        "duration": "2×12 reps",
+        "note": "Groove the pull pattern and feel the lat contraction before loading",
+        "gif": "https://i.ytimg.com/vi/bNmvKpJSWKM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=bNmvKpJSWKM"
+      }
+    ],
+    "cooldown": [
+      {
+        "name": "Child's Pose Lat Stretch",
+        "duration": "60s (reach arms to each side)",
+        "note": "Best stretch for lats after pulling — hold and breathe deeply",
+        "gif": "https://i.ytimg.com/vi/ktQN4lBRh1c/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=ktQN4lBRh1c"
+      },
+      {
+        "name": "Overhead Lat Stretch against Wall",
+        "duration": "45s each side",
+        "note": "Stretch the lat from origin to insertion",
+        "gif": "https://i.ytimg.com/vi/5HLQAVOvxNE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=5HLQAVOvxNE"
+      },
+      {
+        "name": "Supine Bicep Stretch (arm out, palm up)",
+        "duration": "45s each side",
+        "note": "Release bicep tension after curls",
+        "gif": "https://i.ytimg.com/vi/j0rdJpN4B8Y/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=j0rdJpN4B8Y"
+      },
+      {
+        "name": "Doorway Bicep / Forearm Stretch",
+        "duration": "45s each side",
+        "note": "Stretch forearm flexors and bicep together",
+        "gif": "https://i.ytimg.com/vi/p9OCpgx6LQ8/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=p9OCpgx6LQ8"
+      },
+      {
+        "name": "Foam Roll Thoracic Spine",
+        "duration": "60–90s",
+        "note": "Mobilise mid-back after heavy pulling",
+        "gif": "https://i.ytimg.com/vi/YZrB_YSOWHY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=YZrB_YSOWHY"
+      }
+    ]
+  },
+  "legs1": {
+    "title": "Day 3 – Legs",
+    "subtitle": "Quad Focus + Core",
+    "purpose": "Build quad size, overall lower body strength, and direct core stability.",
+    "exercises": [
+      {
+        "name": "Squats",
+        "target": "Quads/Glutes",
+        "sets": 4,
+        "reps": "6-8",
+        "gif": "https://i.ytimg.com/vi/Dy28eq2PjcM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=Dy28eq2PjcM"
+      },
+      {
+        "name": "Leg Press",
+        "target": "Quads",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/IZxyjW7MPJQ/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=IZxyjW7MPJQ"
+      },
+      {
+        "name": "Walking Lunges",
+        "target": "Quads/Glutes",
+        "sets": 3,
+        "reps": "10/leg",
+        "gif": "https://i.ytimg.com/vi/xPzikhQSEAs/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=xPzikhQSEAs"
+      },
+      {
+        "name": "Leg Extension",
+        "target": "Quads",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/YyvSfVjQeL0/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=YyvSfVjQeL0"
+      },
+      {
+        "name": "Standing Calf Raises",
+        "target": "Calves",
+        "sets": 4,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/gwLzBJYoWlI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=gwLzBJYoWlI"
+      },
+      {
+        "name": "Cable Crunches",
+        "target": "Abs",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/dkGwcfo9zto/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=dkGwcfo9zto",
+        "isCore": true
+      },
+      {
+        "name": "Plank",
+        "target": "Core",
+        "sets": 3,
+        "reps": "45-60s",
+        "gif": "https://i.ytimg.com/vi/ASdvN_XEl_c/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=ASdvN_XEl_c",
+        "isCore": true
+      },
+      {
+        "name": "Russian Twists",
+        "target": "Obliques",
+        "sets": 3,
+        "reps": "20 reps (10/side)",
+        "gif": "https://i.ytimg.com/vi/wkD8rjkodUI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=wkD8rjkodUI",
+        "isCore": true
+      },
+      {
+        "name": "Sumo Goblet Squat",
+        "target": "Adductors / Inner Thigh",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/lRYBbchqxtI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=lRYBbchqxtI",
+        "isOptional": true,
+        "optionalNote": "Inner thigh gap filler — not essential if recovery is limited"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Stationary Bike or Treadmill Walk",
+        "duration": "5–7 min",
+        "note": "Warm up hips, knees, and ankles before loading",
+        "gif": "https://i.ytimg.com/vi/fQqndzvURAU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=fQqndzvURAU"
+      },
+      {
+        "name": "Leg Swings (forward/backward)",
+        "duration": "15 reps/leg",
+        "note": "Dynamic hip flexor and hamstring stretch",
+        "gif": "https://i.ytimg.com/vi/3l31E2cMGMk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=3l31E2cMGMk"
+      },
+      {
+        "name": "Leg Swings (side to side)",
+        "duration": "15 reps/leg",
+        "note": "Warm up hip abductors and adductors",
+        "gif": "https://i.ytimg.com/vi/3l31E2cMGMk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=3l31E2cMGMk"
+      },
+      {
+        "name": "Hip Circles",
+        "duration": "10 reps each direction/side",
+        "note": "Full hip joint mobilisation",
+        "gif": "https://i.ytimg.com/vi/jUft857xWzw/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=jUft857xWzw"
+      },
+      {
+        "name": "Bodyweight Squat",
+        "duration": "2×15 reps (slow, full depth)",
+        "note": "Rehearse the squat pattern before adding load",
+        "gif": "https://i.ytimg.com/vi/eFEVKmp3M4g/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=eFEVKmp3M4g"
+      }
+    ],
+    "activation": [
+      {
+        "name": "Glute Bridges",
+        "duration": "2×20 reps (2s hold at top)",
+        "note": "Wake up glutes before squatting — prevents knee cave",
+        "gif": "https://i.ytimg.com/vi/X_IGw8U_e38/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=X_IGw8U_e38"
+      },
+      {
+        "name": "Clamshells (band)",
+        "duration": "2×15/side",
+        "note": "Activate glute medius for knee and hip stability during squats",
+        "gif": "https://i.ytimg.com/vi/TT__6i6hS5w/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=TT__6i6hS5w"
+      },
+      {
+        "name": "Mini-Band Lateral Walks",
+        "duration": "2×15 steps each direction",
+        "note": "Further activate glute medius and TFL",
+        "gif": "https://i.ytimg.com/vi/6eoK_yxY8Ak/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=6eoK_yxY8Ak"
+      },
+      {
+        "name": "Bodyweight Romanian Deadlift",
+        "duration": "1×15 reps",
+        "note": "Prime the hip hinge pattern and hamstring awareness",
+        "gif": "https://i.ytimg.com/vi/b6KFRpuMpOs/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=b6KFRpuMpOs"
+      }
+    ],
+    "cooldown": [
+      {
+        "name": "Standing Quad Stretch",
+        "duration": "60s each leg",
+        "note": "Essential after heavy quad work",
+        "gif": "https://i.ytimg.com/vi/ZKMYmIqnzrU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=ZKMYmIqnzrU"
+      },
+      {
+        "name": "Hip Flexor Lunge Stretch (low lunge)",
+        "duration": "60s each side",
+        "note": "Release hip flexors compressed during squats and leg press",
+        "gif": "https://i.ytimg.com/vi/EVcnudMqQCE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=EVcnudMqQCE"
+      },
+      {
+        "name": "Pigeon Pose",
+        "duration": "90s each side",
+        "note": "Deep glute and piriformis stretch — reduces lower back tightness",
+        "gif": "https://i.ytimg.com/vi/AI5A1PRYX7E/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=AI5A1PRYX7E"
+      },
+      {
+        "name": "Seated Hamstring Stretch",
+        "duration": "60s each leg",
+        "note": "Release hamstrings after lunges and leg press",
+        "gif": "https://i.ytimg.com/vi/aJvfeuu71gw/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=aJvfeuu71gw"
+      },
+      {
+        "name": "Standing Calf Stretch (wall)",
+        "duration": "45s each leg (bent + straight knee)",
+        "note": "Stretch both gastrocnemius and soleus",
+        "gif": "https://i.ytimg.com/vi/7SO6QzfBRaE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=7SO6QzfBRaE"
+      },
+      {
+        "name": "Lower Back Child's Pose",
+        "duration": "60s",
+        "note": "Decompress lumbar spine after loaded squats",
+        "gif": "https://i.ytimg.com/vi/1ygQrW_0MZY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=1ygQrW_0MZY"
+      }
+    ]
+  },
+  "push2": {
+    "title": "Day 4 – Push",
+    "subtitle": "Shoulder Emphasis",
+    "purpose": "Create wide shoulders — key for an aesthetic physique.",
+    "exercises": [
+      {
+        "name": "Overhead Press",
+        "target": "Shoulders",
+        "sets": 4,
+        "reps": "6-8",
+        "gif": "https://i.ytimg.com/vi/2yjwXTZQDDI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=2yjwXTZQDDI"
+      },
+      {
+        "name": "Incline Bench Press",
+        "target": "Upper Chest",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/8iPEnn-ltC8/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=8iPEnn-ltC8"
+      },
+      {
+        "name": "Lateral Raises",
+        "target": "Side Delts",
+        "sets": 4,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/3VcKaXpzqRo/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=3VcKaXpzqRo"
+      },
+      {
+        "name": "Cable Chest Fly",
+        "target": "Chest",
+        "sets": 3,
+        "reps": "12",
+        "gif": "https://i.ytimg.com/vi/Iwe6AmxVf7o/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=Iwe6AmxVf7o"
+      },
+      {
+        "name": "Skull Crushers",
+        "target": "Triceps",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/nRiJVZDpdL0/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=nRiJVZDpdL0"
+      },
+      {
+        "name": "Triceps Rope Pushdown",
+        "target": "Triceps",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/kiuVA0gs3EI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=kiuVA0gs3EI"
+      },
+      {
+        "name": "Cable Serratus Protraction",
+        "target": "Serratus Anterior",
+        "sets": 3,
+        "reps": "15-20",
+        "gif": "https://i.ytimg.com/vi/CEiqDwif3b4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=CEiqDwif3b4",
+        "isOptional": true,
+        "optionalNote": "Fixes winging scapula and improves shoulder press stability — low priority for most"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Light Cardio",
+        "duration": "5 min",
+        "note": "Elevate heart rate and blood flow to upper body",
+        "gif": "https://i.ytimg.com/vi/JX3HAYG2mEU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=JX3HAYG2mEU"
+      },
+      {
+        "name": "90/90 Shoulder Mobility Drill",
+        "duration": "2×10 reps",
+        "note": "Prepare shoulder for overhead pressing through full range",
+        "gif": "https://i.ytimg.com/vi/-avWRzrrH-o/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=-avWRzrrH-o"
+      },
+      {
+        "name": "Wall Slides",
+        "duration": "2×15 reps",
+        "note": "Activate lower traps and serratus anterior — critical for safe pressing",
+        "gif": "https://i.ytimg.com/vi/i_0zLUcE-zk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=i_0zLUcE-zk"
+      },
+      {
+        "name": "Band Pull-Aparts",
+        "duration": "2×20 reps",
+        "note": "Open chest and activate scapular retractors",
+        "gif": "https://i.ytimg.com/vi/QHy6QzOocbM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=QHy6QzOocbM"
+      },
+      {
+        "name": "Arm Circles",
+        "duration": "2×20 reps each direction",
+        "note": "Full shoulder joint warm-up before heavy OHP",
+        "gif": "https://i.ytimg.com/vi/lzR7tzI1JUI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=lzR7tzI1JUI"
+      }
+    ],
+    "activation": [
+      {
+        "name": "Band External Rotations",
+        "duration": "2×15/side",
+        "note": "Non-negotiable before OHP — protects rotator cuff under heavy load",
+        "gif": "https://i.ytimg.com/vi/dS9ORQCnWsE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=dS9ORQCnWsE"
+      },
+      {
+        "name": "YTWL Raises (light /no weight)",
+        "duration": "2×8 each position",
+        "note": "Activates all shoulder stabilisers — Y, T, W, L positions",
+        "gif": "https://i.ytimg.com/vi/tlcuHSz1TQE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=tlcuHSz1TQE"
+      },
+      {
+        "name": "Shoulder CARs (Controlled Articular Rotations)",
+        "duration": "5 slow rotations each side",
+        "note": "Full circumduction to prep shoulder through every angle",
+        "gif": "https://i.ytimg.com/vi/CLWFwun1BfQ/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=CLWFwun1BfQ"
+      },
+      {
+        "name": "Face Pulls (light warmup weight)",
+        "duration": "2×20 reps",
+        "note": "Prime rear delts and external rotators before overhead work",
+        "gif": "https://i.ytimg.com/vi/IeOqdw9WI90/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=IeOqdw9WI90"
+      }
+    ],
+    "cooldown": [
+      {
+        "name": "Cross-Body Shoulder Stretch",
+        "duration": "60s each side",
+        "note": "Must-do after shoulder emphasis day — posterior capsule relief",
+        "gif": "https://i.ytimg.com/vi/aIq0fLi8iak/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=aIq0fLi8iak"
+      },
+      {
+        "name": "Sleeper Stretch",
+        "duration": "45s each side (lying on side)",
+        "note": "Improves internal rotation range — counteracts OHP tightness",
+        "gif": "https://i.ytimg.com/vi/9BN8bRVq3Xo/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=9BN8bRVq3Xo"
+      },
+      {
+        "name": "Overhead Tricep Stretch",
+        "duration": "45s each side",
+        "note": "Release long head of tricep after skull crushers and pushdowns",
+        "gif": "https://i.ytimg.com/vi/_IOHtPSYGbk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=_IOHtPSYGbk"
+      },
+      {
+        "name": "Neck Side Stretch",
+        "duration": "45s each side",
+        "note": "Release upper trap tension accumulated from OHP",
+        "gif": "https://i.ytimg.com/vi/uNM9bQi2LW4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=uNM9bQi2LW4"
+      },
+      {
+        "name": "Doorway Pec Stretch (high arm, low arm)",
+        "duration": "45s each position",
+        "note": "Stretch upper and lower chest fibres",
+        "gif": "https://i.ytimg.com/vi/O8rJw_TmC1Y/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=O8rJw_TmC1Y"
+      }
+    ]
+  },
+  "pull2": {
+    "title": "Day 5 – Pull",
+    "subtitle": "Back Thickness",
+    "purpose": "Develop dense mid-back and traps.",
+    "exercises": [
+      {
+        "name": "Deadlift / Rack Pull",
+        "target": "Full Back/Hamstrings",
+        "sets": 3,
+        "reps": "5",
+        "gif": "https://i.ytimg.com/vi/op9kVnSso6Q/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=op9kVnSso6Q"
+      },
+      {
+        "name": "Bent-Over Barbell Row",
+        "target": "Back",
+        "sets": 4,
+        "reps": "6-8",
+        "gif": "https://i.ytimg.com/vi/vT2GjY_Umpw/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=vT2GjY_Umpw"
+      },
+      {
+        "name": "Chest Supported Row",
+        "target": "Mid Back",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/czoQ_ncuqqI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=czoQ_ncuqqI"
+      },
+      {
+        "name": "Rear Delt Fly",
+        "target": "Rear Delts",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/LsT-bR_zxLo/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=LsT-bR_zxLo"
+      },
+      {
+        "name": "Preacher Curl",
+        "target": "Biceps",
+        "sets": 3,
+        "reps": "10",
+        "gif": "https://i.ytimg.com/vi/fIWP-FRFNU0/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=fIWP-FRFNU0"
+      },
+      {
+        "name": "Cable Curl",
+        "target": "Biceps",
+        "sets": 3,
+        "reps": "12",
+        "gif": "https://i.ytimg.com/vi/NFzTWp2qpiE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=NFzTWp2qpiE"
+      },
+      {
+        "name": "Farmer's Carry",
+        "target": "Forearms / Grip / Traps",
+        "sets": 3,
+        "reps": "30-40m walk",
+        "gif": "https://i.ytimg.com/vi/rt17lmnaLSM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=rt17lmnaLSM",
+        "isOptional": true,
+        "optionalNote": "Grip and forearm strength — skippable on heavy deadlift days if fatigued"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Light Cardio",
+        "duration": "5 min",
+        "note": "Prepare CNS and elevate body temp before heavy deadlifting",
+        "gif": "https://i.ytimg.com/vi/JX3HAYG2mEU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=JX3HAYG2mEU"
+      },
+      {
+        "name": "Hip Hinges (bodyweight)",
+        "duration": "2×15 reps",
+        "note": "Rehearse hinge pattern — critical before deadlift",
+        "gif": "https://i.ytimg.com/vi/JhKrt0JA3v4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=JhKrt0JA3v4"
+      },
+      {
+        "name": "Cat-Cow",
+        "duration": "2×10 reps",
+        "note": "Mobilise lumbar and thoracic spine",
+        "gif": "https://i.ytimg.com/vi/LIVJZZyZ2qM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=LIVJZZyZ2qM"
+      },
+      {
+        "name": "Good Mornings (bodyweight)",
+        "duration": "2×15 reps",
+        "note": "Warm up erectors, hamstrings, and hip hinge under light load",
+        "gif": "https://i.ytimg.com/vi/sAAn3y-qxP4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=sAAn3y-qxP4"
+      },
+      {
+        "name": "Thoracic Extensions over Foam Roller",
+        "duration": "10 extensions",
+        "note": "Open up the thoracic spine for neutral back bracing during deadlift",
+        "gif": "https://i.ytimg.com/vi/uWIJ3TJJwbQ/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=uWIJ3TJJwbQ"
+      }
+    ],
+    "activation": [
+      {
+        "name": "Banded Good Mornings",
+        "duration": "2×15 reps",
+        "note": "Light resistance hip hinge — wakes up erectors and hamstrings before heavy loading",
+        "gif": "https://i.ytimg.com/vi/Eg1siTwmWuo/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=Eg1siTwmWuo"
+      },
+      {
+        "name": "Dead Hang",
+        "duration": "2×30s",
+        "note": "Pre-stretch lats and activate grip strength",
+        "gif": "https://i.ytimg.com/vi/fq9gDvNZQ2c/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=fq9gDvNZQ2c"
+      },
+      {
+        "name": "Banded Rows (seated, light)",
+        "duration": "2×20 reps",
+        "note": "Activate mid-back, rhomboids, and rear delts before rowing movements",
+        "gif": "https://i.ytimg.com/vi/iarqP6WPHbQ/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=iarqP6WPHbQ"
+      },
+      {
+        "name": "Hip Hinge with Pause (50% RDL weight)",
+        "duration": "2×10 reps",
+        "note": "Feel hamstring tension and reinforce neutral spine before full loading",
+        "gif": "https://i.ytimg.com/vi/5rIqP63yWFg/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=5rIqP63yWFg"
+      }
+    ],
+    "cooldown": [
+      {
+        "name": "Child's Pose",
+        "duration": "90s",
+        "note": "Immediate lumbar decompression after heavy deadlifts",
+        "gif": "https://i.ytimg.com/vi/1ygQrW_0MZY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=1ygQrW_0MZY"
+      },
+      {
+        "name": "Seated Forward Fold",
+        "duration": "60s",
+        "note": "Full posterior chain stretch — hamstrings, lower back, calves",
+        "gif": "https://i.ytimg.com/vi/1E-84p0itDs/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=1E-84p0itDs"
+      },
+      {
+        "name": "Standing Hip Hinge Stretch (toe touch)",
+        "duration": "45s",
+        "note": "Gentle active stretch for erectors and hamstrings",
+        "gif": "https://i.ytimg.com/vi/FGWDBn7gLO4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=FGWDBn7gLO4"
+      },
+      {
+        "name": "Sorensen Hold / Back Extension Isometric",
+        "duration": "2×20s hold",
+        "note": "Strengthen erectors in lengthened position — injury prevention",
+        "gif": "https://i.ytimg.com/vi/0VTtig6mUbA/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=0VTtig6mUbA"
+      },
+      {
+        "name": "Bicep Doorway Stretch",
+        "duration": "45s each side",
+        "note": "Release forearms and biceps after heavy curling",
+        "gif": "https://i.ytimg.com/vi/j0rdJpN4B8Y/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=j0rdJpN4B8Y"
+      },
+      {
+        "name": "Foam Roll Thoracic Spine",
+        "duration": "60s",
+        "note": "Post-row mobility work for upper back recovery",
+        "gif": "https://i.ytimg.com/vi/YZrB_YSOWHY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=YZrB_YSOWHY"
+      }
+    ]
+  },
+  "legs2": {
+    "title": "Day 6 – Legs",
+    "subtitle": "Hamstrings + Core",
+    "purpose": "Build posterior chain strength and core stability.",
+    "exercises": [
+      {
+        "name": "Romanian Deadlift",
+        "target": "Hamstrings/Glutes",
+        "sets": 4,
+        "reps": "6-8",
+        "gif": "https://i.ytimg.com/vi/2SHsk9AzdjA/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=2SHsk9AzdjA"
+      },
+      {
+        "name": "Hip Thrust",
+        "target": "Glutes",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/LM8XHLYJoYs/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=LM8XHLYJoYs"
+      },
+      {
+        "name": "Lying Leg Curl",
+        "target": "Hamstrings",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/1Tq3QdYUuHs/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=1Tq3QdYUuHs"
+      },
+      {
+        "name": "Bulgarian Split Squat",
+        "target": "Quads/Glutes",
+        "sets": 3,
+        "reps": "8-10/leg",
+        "gif": "https://i.ytimg.com/vi/2C-uNgKwPLE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=2C-uNgKwPLE"
+      },
+      {
+        "name": "Seated Calf Raises",
+        "target": "Calves",
+        "sets": 4,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/ar8nav0jGoE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=ar8nav0jGoE"
+      },
+      {
+        "name": "Hanging Leg Raises",
+        "target": "Abs/Hip Flexors",
+        "sets": 3,
+        "reps": "10-15",
+        "gif": "https://i.ytimg.com/vi/4BbN9x_GBzY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=4BbN9x_GBzY",
+        "isCore": true
+      },
+      {
+        "name": "Ab Wheel Rollout",
+        "target": "Core",
+        "sets": 3,
+        "reps": "8-12",
+        "gif": "https://i.ytimg.com/vi/ndc391RFNUM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=ndc391RFNUM",
+        "isCore": true
+      },
+      {
+        "name": "Side Plank",
+        "target": "Obliques / Core",
+        "sets": 3,
+        "reps": "30-45s each side",
+        "gif": "https://i.ytimg.com/vi/sKMD_pbNm7w/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=sKMD_pbNm7w",
+        "isCore": true
+      },
+      {
+        "name": "Cable Hip Abduction",
+        "target": "Glute Medius / Hip Abductors",
+        "sets": 3,
+        "reps": "15-20/side",
+        "gif": "https://i.ytimg.com/vi/f-COgi-oVKY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=f-COgi-oVKY",
+        "isOptional": true,
+        "optionalNote": "Glute medius is covered by activation drills — add this only if you want direct loaded work"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Stationary Bike or Treadmill Walk",
+        "duration": "5–7 min",
+        "note": "Warm up posterior chain — hamstrings and glutes respond better when warm",
+        "gif": "https://i.ytimg.com/vi/fQqndzvURAU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=fQqndzvURAU"
+      },
+      {
+        "name": "Leg Swings (forward/backward)",
+        "duration": "15 reps/leg",
+        "note": "Dynamic hamstring and hip flexor stretch",
+        "gif": "https://i.ytimg.com/vi/3l31E2cMGMk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=3l31E2cMGMk"
+      },
+      {
+        "name": "Inchworms",
+        "duration": "2×10 reps",
+        "note": "Full-body dynamic warmup — hamstrings, glutes, core, and shoulders",
+        "gif": "https://i.ytimg.com/vi/o5owhd6Eg5o/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=o5owhd6Eg5o"
+      },
+      {
+        "name": "Hip Circles",
+        "duration": "10 reps each direction/side",
+        "note": "Hip joint mobilisation before loading",
+        "gif": "https://i.ytimg.com/vi/jUft857xWzw/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=jUft857xWzw"
+      },
+      {
+        "name": "Good Mornings (bodyweight)",
+        "duration": "2×15 reps",
+        "note": "Rehearse hip hinge and warm up hamstrings before RDL",
+        "gif": "https://i.ytimg.com/vi/sAAn3y-qxP4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=sAAn3y-qxP4"
+      }
+    ],
+    "activation": [
+      {
+        "name": "Single-Leg Bodyweight RDL",
+        "duration": "2×10/leg",
+        "note": "Activates glute max and hamstring unilaterally — improves balance for hip thrust and RDL",
+        "gif": "https://i.ytimg.com/vi/iRKxRm0zLgA/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=iRKxRm0zLgA"
+      },
+      {
+        "name": "Nordic Curl Eccentrics (slow lower only)",
+        "duration": "2×5 reps (5s lower)",
+        "note": "Best hamstring activation exercise — lower slowly, use hands to return",
+        "gif": "https://i.ytimg.com/vi/sAB613IykjE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=sAB613IykjE"
+      },
+      {
+        "name": "Fire Hydrants",
+        "duration": "2×15/side",
+        "note": "Activate glute medius and piriformis for hip stability",
+        "gif": "https://i.ytimg.com/vi/84oGVgfTggk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=84oGVgfTggk"
+      },
+      {
+        "name": "Glute Bridge Holds",
+        "duration": "2×10 reps (3s hold at top)",
+        "note": "Wake up glutes before hip thrusts for stronger mind-muscle connection",
+        "gif": "https://i.ytimg.com/vi/X_IGw8U_e38/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=X_IGw8U_e38"
+      }
+    ],
+    "cooldown": [
+      {
+        "name": "Lying Hamstring Stretch (strap/towel)",
+        "duration": "60s each leg",
+        "note": "Lengthen hamstrings fully after RDL, leg curl, and RDL",
+        "gif": "https://i.ytimg.com/vi/4dnFltSP-tM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=4dnFltSP-tM"
+      },
+      {
+        "name": "Pigeon Pose",
+        "duration": "90s each side",
+        "note": "Deep hip rotator and glute stretch — especially important after hip thrusts",
+        "gif": "https://i.ytimg.com/vi/AI5A1PRYX7E/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=AI5A1PRYX7E"
+      },
+      {
+        "name": "Hip Flexor Lunge Stretch",
+        "duration": "60s each side",
+        "note": "Counteract hip flexor shortening from leg curls and split squats",
+        "gif": "https://i.ytimg.com/vi/EVcnudMqQCE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=EVcnudMqQCE"
+      },
+      {
+        "name": "Figure-4 Stretch (lying or seated)",
+        "duration": "60s each side",
+        "note": "Releases glute medius, piriformis, and deep hip rotators",
+        "gif": "https://i.ytimg.com/vi/mT-3b4rgRzg/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=mT-3b4rgRzg"
+      },
+      {
+        "name": "Core Decompression — Child's Pose",
+        "duration": "60s",
+        "note": "Let spine decompress after heavy posterior chain loading",
+        "gif": "https://i.ytimg.com/vi/qYvYsFrTI0U/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=qYvYsFrTI0U"
+      },
+      {
+        "name": "Calf Stretch against Wall",
+        "duration": "45s/leg (straight + bent knee)",
+        "note": "Stretch both calf heads after seated calf raises",
+        "gif": "https://i.ytimg.com/vi/dEJgPRgsnnY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=dEJgPRgsnnY"
+      }
+    ]
+  }
+}
