@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import workoutData from '../data/workoutData.json';
 import ExerciseCard from '../components/ExerciseCard';
 
@@ -101,8 +101,14 @@ function CollapsibleSection({ title, icon, color, bgColor, items, defaultOpen = 
 
 function WorkoutDashboard() {
     const [activeTab, setActiveTab] = useState('push1');
+    const [mainWorkoutOpen, setMainWorkoutOpen] = useState(true);
     const schedule = workoutData.schedule;
+    const visibleSchedule = schedule.filter((day) => day.day !== 7);
     const dayData = workoutData[activeTab];
+
+    useEffect(() => {
+        setMainWorkoutOpen(true);
+    }, [activeTab]);
 
     return (
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px' }}>
@@ -119,11 +125,11 @@ function WorkoutDashboard() {
             {/* Weekly Schedule Bar */}
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(7, 1fr)',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))',
                 gap: 6,
                 marginBottom: 32,
             }}>
-                {schedule.map((d) => {
+                {visibleSchedule.map((d) => {
                     const isActive = d.type === activeTab;
                     const color = getTypeColor(d.type);
                     return (
@@ -217,30 +223,52 @@ function WorkoutDashboard() {
 
                     {/* Main Workout */}
                     <div style={{ marginBottom: 24 }}>
-                        <div style={{
-                            display: 'flex', alignItems: 'center', gap: 10,
-                            marginBottom: 16, padding: '12px 18px',
-                            backgroundColor: '#1f2937',
-                            borderRadius: 10,
-                            border: `1px solid ${getTypeColor(activeTab)}44`,
-                        }}>
-                            <span style={{ fontSize: 18 }}>💪</span>
-                            <span style={{ fontSize: 15, fontWeight: 700, color: getTypeColor(activeTab) }}>
-                                Main Workout
-                            </span>
-                            <span style={{
-                                fontSize: 11, fontWeight: 600, color: getTypeColor(activeTab),
-                                backgroundColor: getTypeColor(activeTab) + '22', padding: '2px 8px', borderRadius: 20,
-                            }}>{dayData.exercises.length} exercises</span>
-                        </div>
-                        <div style={{
-                            display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-                            gap: 20,
-                        }}>
-                            {dayData.exercises.map((exercise) => (
-                                <ExerciseCard key={exercise.name} exercise={exercise} />
-                            ))}
+                        <div style={{ borderRadius: 12, overflow: 'hidden', border: `1px solid ${getTypeColor(activeTab)}44` }}>
+                            <button
+                                onClick={() => setMainWorkoutOpen((open) => !open)}
+                                style={{
+                                    width: '100%',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    gap: 12,
+                                    padding: '12px 18px',
+                                    backgroundColor: '#1f2937',
+                                    border: 'none',
+                                    cursor: 'pointer',
+                                    textAlign: 'left',
+                                }}
+                            >
+                                <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+                                    <span style={{ fontSize: 18 }}>💪</span>
+                                    <span style={{ fontSize: 15, fontWeight: 700, color: getTypeColor(activeTab) }}>
+                                        Main Workout
+                                    </span>
+                                    <span style={{
+                                        fontSize: 11, fontWeight: 600, color: getTypeColor(activeTab),
+                                        backgroundColor: getTypeColor(activeTab) + '22', padding: '2px 8px', borderRadius: 20,
+                                    }}>{dayData.exercises.length} exercises</span>
+                                </div>
+                                <span style={{
+                                    fontSize: 16,
+                                    color: getTypeColor(activeTab),
+                                    transition: 'transform 0.2s',
+                                    display: 'inline-block',
+                                    transform: mainWorkoutOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                                }}>▼</span>
+                            </button>
+                            {mainWorkoutOpen && (
+                                <div style={{
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                                    gap: 20,
+                                    paddingTop: 16,
+                                }}>
+                                    {dayData.exercises.map((exercise) => (
+                                        <ExerciseCard key={exercise.name} exercise={exercise} />
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </div>
 
