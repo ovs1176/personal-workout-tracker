@@ -1,0 +1,956 @@
+{
+  "schedule": [
+    {
+      "day": 1,
+      "type": "push1",
+      "label": "Push",
+      "sublabel": "Chest Emphasis",
+      "color": "#7c3aed"
+    },
+    {
+      "day": 2,
+      "type": "pull2",
+      "label": "Pull",
+      "sublabel": "Back Thickness",
+      "color": "#2563eb"
+    },
+    {
+      "day": 3,
+      "type": "running1",
+      "label": "Run",
+      "sublabel": "Cardio + Core",
+      "color": "#f97316"
+    },
+    {
+      "day": 4,
+      "type": "push2",
+      "label": "Push",
+      "sublabel": "Shoulder Emphasis",
+      "color": "#7c3aed"
+    },
+    {
+      "day": 5,
+      "type": "pull1",
+      "label": "Pull",
+      "sublabel": "Back Width + Core",
+      "color": "#2563eb"
+    },
+    {
+      "day": 6,
+      "type": "legs1",
+      "label": "Legs",
+      "sublabel": "Quads + Hamstrings + Core",
+      "color": "#059669"
+    },
+    {
+      "day": 7,
+      "type": "rest",
+      "label": "Rest",
+      "sublabel": "Recovery",
+      "color": "#374151"
+    }
+  ],
+  "push1": {
+    "title": "Day 1 – Push",
+    "subtitle": "Chest Emphasis",
+    "purpose": "Build chest mass and shoulder width using bodyweight supersets, pressing, and isolation work.",
+    "exercises": [
+      {
+        "name": "Push-up Superset",
+        "target": "Chest / Back / Shoulders",
+        "sets": 3,
+        "reps": "20 wide push-ups → 5 wide pull-ups → 10 close push-ups → 5-10 pull-ups → 10 military push-ups",
+        "gif": "https://i.ytimg.com/vi/pKZ-lkKKMws/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=pKZ-lkKKMws",
+        "optionalNote": "Complete all 5 movements back-to-back as one superset. Rest 90s between rounds."
+      },
+      {
+        "name": "Incline Dumbbell Press",
+        "target": "Upper Chest",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/DbFgADa2PL8/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=DbFgADa2PL8"
+      },
+      {
+        "name": "Cable Chest Fly (Lower Chest)",
+        "target": "Lower Chest",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/Iwe6AmxVf7o/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=Iwe6AmxVf7o"
+      },
+      {
+        "name": "Chest Butterfly (Pec Deck)",
+        "target": "Chest / Pectorals",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/eozdVDA78K0/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=eozdVDA78K0"
+      },
+      {
+        "name": "Barbell Overhead Press",
+        "target": "Shoulders",
+        "sets": 3,
+        "reps": "6-8",
+        "gif": "https://i.ytimg.com/vi/2yjwXTZQDDI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=2yjwXTZQDDI"
+      },
+      {
+        "name": "Lateral Raises",
+        "target": "Side Delts",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/3VcKaXpzqRo/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=3VcKaXpzqRo"
+      },
+      {
+        "name": "Triceps Pushdown",
+        "target": "Triceps",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/2-LAMcpzODU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=2-LAMcpzODU"
+      },
+      {
+        "name": "Triceps Overhead Extension",
+        "target": "Triceps (Long Head)",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/nRiJVZDpdL0/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=nRiJVZDpdL0"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Arm Circles",
+        "duration": "2×20 reps (each direction)",
+        "note": "Forward and backward to fully mobilise the shoulder joint before pressing",
+        "gif": "https://i.ytimg.com/vi/lzR7tzI1JUI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=lzR7tzI1JUI"
+      },
+      {
+        "name": "Shoulder Rolls",
+        "duration": "2×20 reps (forward + backward)",
+        "note": "Loosen upper traps and rotator cuff — reduces shoulder impingement risk",
+        "gif": "https://i.ytimg.com/vi/LgPCO6RIH3Q/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=LgPCO6RIH3Q"
+      },
+      {
+        "name": "Front Tricep Stretch",
+        "duration": "30s each side",
+        "note": "Raise one arm overhead, bend at elbow and pull gently with the other hand — stretches the long head of triceps",
+        "gif": "https://i.ytimg.com/vi/_IOHtPSYGbk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=_IOHtPSYGbk"
+      },
+      {
+        "name": "Rear Tricep Stretch (Cross-Body)",
+        "duration": "30s each side",
+        "note": "Pull one straight arm across your chest with the opposite hand — stretches the rear tricep and posterior shoulder",
+        "gif": "https://i.ytimg.com/vi/aIq0fLi8iak/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=aIq0fLi8iak"
+      },
+      {
+        "name": "Wrist Stretch",
+        "duration": "30s each direction per wrist",
+        "note": "Extend arm, pull fingers back with opposite hand (flexion + extension) — essential before pressing and push-ups",
+        "gif": "https://i.ytimg.com/vi/IeOqdw9WI90/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=v3fwWbBEJhc"
+      },
+      {
+        "name": "Standing Cross-Body Toe Touch",
+        "duration": "2×15 reps (alternating sides)",
+        "note": "Stand feet shoulder-width apart, reach left hand to right toe and right hand to left toe alternately — mobilises lower back and hamstrings",
+        "gif": "https://i.ytimg.com/vi/FGWDBn7gLO4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=FGWDBn7gLO4"
+      },
+      {
+        "name": "90/90 Shoulder Mobility Drill",
+        "duration": "2×10 reps each side",
+        "note": "Lie on side, top arm at 90 degrees — rotate chest open to the floor and back. Opens the thoracic spine and prepares shoulder for full pressing range",
+        "gif": "https://i.ytimg.com/vi/-avWRzrrH-o/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=-avWRzrrH-o"
+      }
+    ],
+    "activation": [],
+    "cooldown": [
+      {
+        "name": "Doorway Chest Stretch",
+        "duration": "60s each side",
+        "note": "Lengthen the pectorals after heavy pressing",
+        "gif": "https://i.ytimg.com/vi/O8rJw_TmC1Y/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=O8rJw_TmC1Y"
+      },
+      {
+        "name": "Cross-Body Shoulder Stretch",
+        "duration": "45s each side",
+        "note": "Release posterior capsule and rear delt",
+        "gif": "https://i.ytimg.com/vi/aIq0fLi8iak/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=aIq0fLi8iak"
+      },
+      {
+        "name": "Overhead Tricep Stretch",
+        "duration": "45s each side",
+        "note": "Stretch long head of triceps",
+        "gif": "https://i.ytimg.com/vi/_IOHtPSYGbk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=_IOHtPSYGbk"
+      },
+      {
+        "name": "Thoracic Extension over Foam Roller",
+        "duration": "60–90s",
+        "note": "Decompress the spine and open the chest",
+        "gif": "https://i.ytimg.com/vi/uWIJ3TJJwbQ/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=uWIJ3TJJwbQ"
+      },
+      {
+        "name": "Pec Minor Stretch (hands clasped behind back)",
+        "duration": "60s",
+        "note": "Often tight from pressing — prevent rounded shoulders",
+        "gif": "https://i.ytimg.com/vi/HmB8M3CEBCM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=HmB8M3CEBCM"
+      }
+    ]
+  },
+  "pull1": {
+    "title": "Day 5 – Pull",
+    "subtitle": "Back Width + Core",
+    "purpose": "Develop V-taper — wide lats and rear delts. Core circuit at the end.",
+    "exercises": [
+      {
+        "name": "Pull-up Superset",
+        "target": "Back / Chest / Shoulders",
+        "sets": 3,
+        "reps": "5 wide pull-ups → 10 wide push-ups → 5 close pull-ups → 10 military push-ups → 5-10 pull-ups",
+        "gif": "https://i.ytimg.com/vi/eGo4IYlbE5g/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=eGo4IYlbE5g",
+        "optionalNote": "Complete all 5 movements back-to-back as one superset. Rest 90s between rounds."
+      },
+      {
+        "name": "Pull-ups / Lat Pulldown",
+        "target": "Lats",
+        "sets": 4,
+        "reps": "6-10",
+        "gif": "https://i.ytimg.com/vi/eGo4IYlbE5g/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=eGo4IYlbE5g"
+      },
+      {
+        "name": "Single Arm Dumbbell Row",
+        "target": "Back",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/pYcpY20QaE8/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=pYcpY20QaE8"
+      },
+      {
+        "name": "Seated Cable Row",
+        "target": "Mid Back",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/GZbfZ033f74/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=GZbfZ033f74"
+      },
+      {
+        "name": "Face Pulls",
+        "target": "Rear Delts",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/IeOqdw9WI90/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=IeOqdw9WI90"
+      },
+      {
+        "name": "Barbell Curl",
+        "target": "Biceps",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/kwG2ipFRgfo/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=kwG2ipFRgfo"
+      },
+      {
+        "name": "Hammer Curl",
+        "target": "Biceps/Brachialis",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/TwD-YGVP4Bk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=TwD-YGVP4Bk"
+      },
+      {
+        "name": "Hanging Leg Raises",
+        "target": "Rectus Abdominis",
+        "sets": 3,
+        "reps": "10-12",
+        "isCore": true,
+        "gif": "https://i.ytimg.com/vi/4BbN9x_GBzY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=4BbN9x_GBzY"
+      },
+      {
+        "name": "Cable Crunches",
+        "target": "Abs",
+        "sets": 3,
+        "reps": "12-15",
+        "isCore": true,
+        "gif": "https://i.ytimg.com/vi/dkGwcfo9zto/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=dkGwcfo9zto"
+      },
+      {
+        "name": "Farmer's Walk",
+        "target": "Forearms / Grip / Traps",
+        "sets": 3,
+        "reps": "30-40m walk",
+        "gif": "https://i.ytimg.com/vi/rt17lmnaLSM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=rt17lmnaLSM",
+        "optionalNote": "Hold heavy dumbbells and walk with a tight grip — builds forearm thickness and grip strength"
+      },
+      {
+        "name": "Wrist Curls (Barbell / Dumbbell)",
+        "target": "Forearms / Wrist Flexors",
+        "sets": 3,
+        "reps": "15-20",
+        "gif": "https://i.ytimg.com/vi/v3fwWbBEJhc/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=v3fwWbBEJhc"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Hip Hinges (bodyweight)",
+        "duration": "2×15 reps",
+        "note": "Rehearse hinge pattern — critical before deadlift",
+        "gif": "https://i.ytimg.com/vi/JhKrt0JA3v4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=JhKrt0JA3v4"
+      },
+      {
+        "name": "Wrist Stretch",
+        "duration": "30s each direction per wrist",
+        "note": "Extend arm, pull fingers back with opposite hand (flexion + extension) — protects wrists during rows and deadlift grip",
+        "gif": "https://i.ytimg.com/vi/v3fwWbBEJhc/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=v3fwWbBEJhc"
+      },
+      {
+        "name": "Standing Cross-Body Toe Touch",
+        "duration": "2x15 reps (alternating sides)",
+        "note": "Reach left hand to right toe and right hand to left toe alternately — mobilises lower back and hamstrings before deadlifts",
+        "gif": "https://i.ytimg.com/vi/FGWDBn7gLO4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=FGWDBn7gLO4"
+      },
+      {
+        "name": "Hip Circles",
+        "duration": "10 reps each direction/side",
+        "note": "Full hip joint mobilisation — loosens hips and lower back before rows and deadlifts",
+        "gif": "https://i.ytimg.com/vi/jUft857xWzw/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=jUft857xWzw"
+      }
+    ],
+    "activation": [],
+    "cooldown": [
+      {
+        "name": "Child's Pose Lat Stretch",
+        "duration": "60s (reach arms to each side)",
+        "note": "Best stretch for lats after pulling — hold and breathe deeply",
+        "gif": "https://i.ytimg.com/vi/ktQN4lBRh1c/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=ktQN4lBRh1c"
+      },
+      {
+        "name": "Overhead Lat Stretch against Wall",
+        "duration": "45s each side",
+        "note": "Stretch the lat from origin to insertion",
+        "gif": "https://i.ytimg.com/vi/5HLQAVOvxNE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=5HLQAVOvxNE"
+      },
+      {
+        "name": "Supine Bicep Stretch (arm out, palm up)",
+        "duration": "45s each side",
+        "note": "Release bicep tension after curls",
+        "gif": "https://i.ytimg.com/vi/j0rdJpN4B8Y/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=j0rdJpN4B8Y"
+      },
+      {
+        "name": "Doorway Bicep / Forearm Stretch",
+        "duration": "45s each side",
+        "note": "Stretch forearm flexors and bicep together",
+        "gif": "https://i.ytimg.com/vi/p9OCpgx6LQ8/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=p9OCpgx6LQ8"
+      },
+      {
+        "name": "Foam Roll Thoracic Spine",
+        "duration": "60–90s",
+        "note": "Mobilise mid-back after heavy pulling",
+        "gif": "https://i.ytimg.com/vi/YZrB_YSOWHY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=YZrB_YSOWHY"
+      }
+    ]
+  },
+  "running1": {
+    "title": "Day 3 – Run",
+    "subtitle": "Cardio + Core",
+    "purpose": "Build aerobic base and cardiovascular capacity. Post-run core circuit targets abs 3× per week.",
+    "exercises": [
+      {
+        "name": "Easy Run",
+        "target": "Cardiovascular Endurance",
+        "duration": "20 min @ easy conversational pace",
+        "note": "Keep heart rate at 60–70% max. You should be able to hold a conversation. This builds your aerobic base.",
+        "gif": "https://i.ytimg.com/vi/kVnyY17VS9Y/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=kVnyY17VS9Y"
+      },
+      {
+        "name": "Interval Sprints",
+        "target": "Speed + Lactate Threshold",
+        "duration": "6 × 1 min hard / 1 min walk",
+        "note": "Run at 85–90% max effort for 1 min, then walk to recover. Improves speed and VO2 max.",
+        "gif": "https://i.ytimg.com/vi/oB-erZ0lGz8/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=oB-erZ0lGz8"
+      },
+      {
+        "name": "Hanging Leg Raises",
+        "target": "Rectus Abdominis",
+        "sets": 3,
+        "reps": "10-12",
+        "isCore": true,
+        "gif": "https://i.ytimg.com/vi/4BbN9x_GBzY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=4BbN9x_GBzY"
+      },
+      {
+        "name": "Ab Wheel Rollout",
+        "target": "Core / Rectus Abdominis",
+        "sets": 3,
+        "reps": "8-10",
+        "isCore": true,
+        "gif": "https://i.ytimg.com/vi/ndc391RFNUM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=ndc391RFNUM"
+      },
+      {
+        "name": "Russian Twists",
+        "target": "Obliques",
+        "sets": 3,
+        "reps": "20 (10/side)",
+        "isCore": true,
+        "gif": "https://i.ytimg.com/vi/wkD8rjkodUI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=wkD8rjkodUI"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Brisk Walk",
+        "duration": "5 min",
+        "note": "Elevate heart rate gradually before running — prevents shock to the joints",
+        "gif": "https://i.ytimg.com/vi/njeZ29umqVE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=njeZ29umqVE"
+      },
+      {
+        "name": "Leg Swings (forward/backward)",
+        "duration": "15 reps/leg",
+        "note": "Dynamic hip flexor and hamstring warmup — critical for running stride",
+        "gif": "https://i.ytimg.com/vi/3l31E2cMGMk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=3l31E2cMGMk"
+      },
+      {
+        "name": "High Knees March",
+        "duration": "1 min",
+        "note": "Activates hip flexors and glutes, primes running mechanics",
+        "gif": "https://i.ytimg.com/vi/oDdkytliOqE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=oDdkytliOqE"
+      },
+      {
+        "name": "Ankle Circles",
+        "duration": "10 reps each direction/ankle",
+        "note": "Loosen ankles before impact — reduces shin splint risk",
+        "gif": "https://i.ytimg.com/vi/FyMKhvW0Xbg/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=FyMKhvW0Xbg"
+      }
+    ],
+    "activation": [],
+    "cooldown": [
+      {
+        "name": "Standing Quad Stretch",
+        "duration": "45s each leg",
+        "note": "Release quads and hip flexors after running stride",
+        "gif": "https://i.ytimg.com/vi/ZKMYmIqnzrU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=ZKMYmIqnzrU"
+      },
+      {
+        "name": "Standing Hip Flexor Stretch (low lunge)",
+        "duration": "45s each side",
+        "note": "Counteract hip flexor tightness from running — prevents lower back pain",
+        "gif": "https://i.ytimg.com/vi/EVcnudMqQCE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=EVcnudMqQCE"
+      },
+      {
+        "name": "Seated Hamstring Stretch",
+        "duration": "60s each leg",
+        "note": "Lengthen hamstrings after sustained cardio effort",
+        "gif": "https://i.ytimg.com/vi/aJvfeuu71gw/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=aJvfeuu71gw"
+      },
+      {
+        "name": "Pigeon Pose",
+        "duration": "60s each side",
+        "note": "Deep glute and piriformis release — especially important after running",
+        "gif": "https://i.ytimg.com/vi/AI5A1PRYX7E/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=AI5A1PRYX7E"
+      },
+      {
+        "name": "Standing Calf Stretch (wall)",
+        "duration": "45s each leg (bent + straight knee)",
+        "note": "Stretch both gastrocnemius and soleus to prevent tightness and shin splints",
+        "gif": "https://i.ytimg.com/vi/7SO6QzfBRaE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=7SO6QzfBRaE"
+      }
+    ]
+  },
+  "push2": {
+    "title": "Day 4 – Push",
+    "subtitle": "Shoulder Emphasis",
+    "purpose": "Build wide shoulders and upper chest with pressing volume, isolation work, and tricep finishers.",
+    "exercises": [
+      {
+        "name": "Push-up Superset",
+        "target": "Chest / Back / Shoulders",
+        "sets": 3,
+        "reps": "20 wide push-ups → 5 wide pull-ups → 10 close push-ups → 5-10 pull-ups → 10 military push-ups",
+        "gif": "https://i.ytimg.com/vi/pKZ-lkKKMws/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=pKZ-lkKKMws",
+        "optionalNote": "Complete all 5 movements back-to-back as one superset. Rest 90s between rounds."
+      },
+      {
+        "name": "Dumbbell Overhead Press",
+        "target": "Shoulders",
+        "sets": 4,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/qEwKCR5JCog/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=qEwKCR5JCog"
+      },
+      {
+        "name": "Incline Bench Press",
+        "target": "Upper Chest",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/8iPEnn-ltC8/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=8iPEnn-ltC8"
+      },
+      {
+        "name": "Lateral Raises",
+        "target": "Side Delts",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/3VcKaXpzqRo/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=3VcKaXpzqRo"
+      },
+      {
+        "name": "Cable Chest Fly (Middle & Lower Chest)",
+        "target": "Middle & Lower Chest",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/Iwe6AmxVf7o/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=Iwe6AmxVf7o"
+      },
+      {
+        "name": "Skull Crushers",
+        "target": "Triceps",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/nRiJVZDpdL0/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=nRiJVZDpdL0"
+      },
+      {
+        "name": "Triceps Rope Pushdown",
+        "target": "Triceps",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/kiuVA0gs3EI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=kiuVA0gs3EI"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Arm Circles",
+        "duration": "2×20 reps (each direction)",
+        "note": "Forward and backward to fully mobilise the shoulder joint before pressing",
+        "gif": "https://i.ytimg.com/vi/lzR7tzI1JUI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=lzR7tzI1JUI"
+      },
+      {
+        "name": "Shoulder Rolls",
+        "duration": "2×20 reps (forward + backward)",
+        "note": "Loosen upper traps and rotator cuff — reduces shoulder impingement risk",
+        "gif": "https://i.ytimg.com/vi/LgPCO6RIH3Q/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=LgPCO6RIH3Q"
+      },
+      {
+        "name": "Front Tricep Stretch",
+        "duration": "30s each side",
+        "note": "Raise one arm overhead, bend at elbow and pull gently with the other hand — stretches the long head of triceps",
+        "gif": "https://i.ytimg.com/vi/_IOHtPSYGbk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=_IOHtPSYGbk"
+      },
+      {
+        "name": "Rear Tricep Stretch (Cross-Body)",
+        "duration": "30s each side",
+        "note": "Pull one straight arm across your chest with the opposite hand — stretches the rear tricep and posterior shoulder",
+        "gif": "https://i.ytimg.com/vi/aIq0fLi8iak/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=aIq0fLi8iak"
+      },
+      {
+        "name": "Wrist Stretch",
+        "duration": "30s each direction per wrist",
+        "note": "Extend arm, pull fingers back with opposite hand (flexion + extension) — essential before pressing and push-ups",
+        "gif": "https://i.ytimg.com/vi/IeOqdw9WI90/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=v3fwWbBEJhc"
+      },
+      {
+        "name": "Standing Cross-Body Toe Touch",
+        "duration": "2×15 reps (alternating sides)",
+        "note": "Stand feet shoulder-width apart, reach left hand to right toe and right hand to left toe alternately — mobilises lower back and hamstrings",
+        "gif": "https://i.ytimg.com/vi/FGWDBn7gLO4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=FGWDBn7gLO4"
+      },
+      {
+        "name": "90/90 Shoulder Mobility Drill",
+        "duration": "2×10 reps each side",
+        "note": "Lie on side, top arm at 90 degrees — rotate chest open to the floor and back. Opens the thoracic spine and prepares shoulder for full pressing range",
+        "gif": "https://i.ytimg.com/vi/-avWRzrrH-o/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=-avWRzrrH-o"
+      }
+    ],
+    "activation": [],
+    "cooldown": [
+      {
+        "name": "Cross-Body Shoulder Stretch",
+        "duration": "60s each side",
+        "note": "Must-do after shoulder emphasis day — posterior capsule relief",
+        "gif": "https://i.ytimg.com/vi/aIq0fLi8iak/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=aIq0fLi8iak"
+      },
+      {
+        "name": "Sleeper Stretch",
+        "duration": "45s each side (lying on side)",
+        "note": "Improves internal rotation range — counteracts OHP tightness",
+        "gif": "https://i.ytimg.com/vi/9BN8bRVq3Xo/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=9BN8bRVq3Xo"
+      },
+      {
+        "name": "Overhead Tricep Stretch",
+        "duration": "45s each side",
+        "note": "Release long head of tricep after skull crushers and pushdowns",
+        "gif": "https://i.ytimg.com/vi/_IOHtPSYGbk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=_IOHtPSYGbk"
+      },
+      {
+        "name": "Neck Side Stretch",
+        "duration": "45s each side",
+        "note": "Release upper trap tension accumulated from OHP",
+        "gif": "https://i.ytimg.com/vi/uNM9bQi2LW4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=uNM9bQi2LW4"
+      },
+      {
+        "name": "Doorway Pec Stretch (high arm, low arm)",
+        "duration": "45s each position",
+        "note": "Stretch upper and lower chest fibres",
+        "gif": "https://i.ytimg.com/vi/O8rJw_TmC1Y/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=O8rJw_TmC1Y"
+      }
+    ]
+  },
+  "pull2": {
+    "title": "Day 2 – Pull",
+    "subtitle": "Back Thickness",
+    "purpose": "Develop dense mid-back, traps, and rear delts. Deadlift placed last after all pulling work.",
+    "exercises": [
+      {
+        "name": "Pull-up Superset",
+        "target": "Back / Chest / Shoulders",
+        "sets": 3,
+        "reps": "5 wide pull-ups → 10 wide push-ups → 5 close pull-ups → 10 military push-ups → 5-10 pull-ups",
+        "gif": "https://i.ytimg.com/vi/eGo4IYlbE5g/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=eGo4IYlbE5g",
+        "optionalNote": "Complete all 5 movements back-to-back as one superset. Rest 90s between rounds."
+      },
+      {
+        "name": "Bent-Over Barbell Row",
+        "target": "Back",
+        "sets": 4,
+        "reps": "6-8",
+        "gif": "https://i.ytimg.com/vi/vT2GjY_Umpw/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=vT2GjY_Umpw"
+      },
+      {
+        "name": "Chest Supported Row",
+        "target": "Mid Back",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/czoQ_ncuqqI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=czoQ_ncuqqI"
+      },
+      {
+        "name": "Reverse Pec Deck Fly (Reverse Butterfly)",
+        "target": "Rear Delts / Upper Back",
+        "sets": 3,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/LsT-bR_zxLo/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=LsT-bR_zxLo"
+      },
+      {
+        "name": "Preacher Curl",
+        "target": "Biceps",
+        "sets": 3,
+        "reps": "10",
+        "gif": "https://i.ytimg.com/vi/fIWP-FRFNU0/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=fIWP-FRFNU0"
+      },
+      {
+        "name": "Cable Curl",
+        "target": "Biceps",
+        "sets": 3,
+        "reps": "12",
+        "gif": "https://i.ytimg.com/vi/NFzTWp2qpiE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=NFzTWp2qpiE"
+      },
+      {
+        "name": "Farmer's Walk",
+        "target": "Forearms / Grip / Traps",
+        "sets": 3,
+        "reps": "30-40m walk",
+        "gif": "https://i.ytimg.com/vi/rt17lmnaLSM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=rt17lmnaLSM"
+      },
+      {
+        "name": "Deadlift",
+        "target": "Full Back / Hamstrings / Glutes",
+        "sets": 3,
+        "reps": "4-6",
+        "gif": "https://i.ytimg.com/vi/op9kVnSso6Q/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=op9kVnSso6Q"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Hip Hinges (bodyweight)",
+        "duration": "2×15 reps",
+        "note": "Rehearse hinge pattern — critical before deadlift",
+        "gif": "https://i.ytimg.com/vi/JhKrt0JA3v4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=JhKrt0JA3v4"
+      },
+      {
+        "name": "Wrist Stretch",
+        "duration": "30s each direction per wrist",
+        "note": "Extend arm, pull fingers back with opposite hand (flexion + extension) — protects wrists during rows and deadlift grip",
+        "gif": "https://i.ytimg.com/vi/v3fwWbBEJhc/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=v3fwWbBEJhc"
+      },
+      {
+        "name": "Standing Cross-Body Toe Touch",
+        "duration": "2x15 reps (alternating sides)",
+        "note": "Reach left hand to right toe and right hand to left toe alternately — mobilises lower back and hamstrings before deadlifts",
+        "gif": "https://i.ytimg.com/vi/FGWDBn7gLO4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=FGWDBn7gLO4"
+      },
+      {
+        "name": "Hip Circles",
+        "duration": "10 reps each direction/side",
+        "note": "Full hip joint mobilisation — loosens hips and lower back before rows and deadlifts",
+        "gif": "https://i.ytimg.com/vi/jUft857xWzw/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=jUft857xWzw"
+      }
+    ],
+    "activation": [],
+    "cooldown": [
+      {
+        "name": "Child's Pose",
+        "duration": "90s",
+        "note": "Immediate lumbar decompression after heavy deadlifts",
+        "gif": "https://i.ytimg.com/vi/1ygQrW_0MZY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=1ygQrW_0MZY"
+      },
+      {
+        "name": "Seated Forward Fold",
+        "duration": "60s",
+        "note": "Full posterior chain stretch — hamstrings, lower back, calves",
+        "gif": "https://i.ytimg.com/vi/1E-84p0itDs/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=1E-84p0itDs"
+      },
+      {
+        "name": "Standing Hip Hinge Stretch (toe touch)",
+        "duration": "45s",
+        "note": "Gentle active stretch for erectors and hamstrings",
+        "gif": "https://i.ytimg.com/vi/FGWDBn7gLO4/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=FGWDBn7gLO4"
+      },
+      {
+        "name": "Bicep Doorway Stretch",
+        "duration": "45s each side",
+        "note": "Release forearms and biceps after heavy curling",
+        "gif": "https://i.ytimg.com/vi/j0rdJpN4B8Y/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=j0rdJpN4B8Y"
+      },
+      {
+        "name": "Foam Roll Thoracic Spine",
+        "duration": "60s",
+        "note": "Post-row mobility work for upper back recovery",
+        "gif": "https://i.ytimg.com/vi/YZrB_YSOWHY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=YZrB_YSOWHY"
+      }
+    ]
+  },
+  "legs1": {
+    "title": "Day 6 – Legs",
+    "subtitle": "Quads + Hamstrings + Core",
+    "purpose": "Build quad and posterior chain strength. Core circuit finishes the session.",
+    "exercises": [
+      {
+        "name": "Squats",
+        "target": "Quads/Glutes",
+        "sets": 4,
+        "reps": "6-8",
+        "gif": "https://i.ytimg.com/vi/Dy28eq2PjcM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=Dy28eq2PjcM"
+      },
+      {
+        "name": "Romanian Deadlift",
+        "target": "Hamstrings/Glutes",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/2SHsk9AzdjA/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=2SHsk9AzdjA"
+      },
+      {
+        "name": "Leg Press",
+        "target": "Quads",
+        "sets": 3,
+        "reps": "8-10",
+        "gif": "https://i.ytimg.com/vi/IZxyjW7MPJQ/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=IZxyjW7MPJQ"
+      },
+      {
+        "name": "Bulgarian Split Squat",
+        "target": "Quads/Glutes",
+        "sets": 3,
+        "reps": "8-10/leg",
+        "gif": "https://i.ytimg.com/vi/2C-uNgKwPLE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=2C-uNgKwPLE"
+      },
+      {
+        "name": "Lying Leg Curl",
+        "target": "Hamstrings",
+        "sets": 3,
+        "reps": "10-12",
+        "gif": "https://i.ytimg.com/vi/1Tq3QdYUuHs/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=1Tq3QdYUuHs"
+      },
+      {
+        "name": "Standing Calf Raises",
+        "target": "Calves",
+        "sets": 4,
+        "reps": "12-15",
+        "gif": "https://i.ytimg.com/vi/gwLzBJYoWlI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=gwLzBJYoWlI"
+      },
+      {
+        "name": "Hanging Leg Raises",
+        "target": "Rectus Abdominis",
+        "sets": 3,
+        "reps": "10-12",
+        "isCore": true,
+        "gif": "https://i.ytimg.com/vi/4BbN9x_GBzY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=4BbN9x_GBzY"
+      },
+      {
+        "name": "Cable Crunches",
+        "target": "Abs",
+        "sets": 3,
+        "reps": "12-15",
+        "isCore": true,
+        "gif": "https://i.ytimg.com/vi/dkGwcfo9zto/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=dkGwcfo9zto"
+      },
+      {
+        "name": "Russian Twists",
+        "target": "Obliques",
+        "sets": 3,
+        "reps": "20 (10/side)",
+        "isCore": true,
+        "gif": "https://i.ytimg.com/vi/wkD8rjkodUI/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=wkD8rjkodUI"
+      }
+    ],
+    "warmup": [
+      {
+        "name": "Stationary Bike or Treadmill Walk",
+        "duration": "5–7 min",
+        "note": "Warm up hips, knees, and ankles before loading",
+        "gif": "https://i.ytimg.com/vi/fQqndzvURAU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=fQqndzvURAU"
+      },
+      {
+        "name": "Leg Swings (forward/backward)",
+        "duration": "15 reps/leg",
+        "note": "Dynamic hip flexor and hamstring stretch",
+        "gif": "https://i.ytimg.com/vi/3l31E2cMGMk/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=3l31E2cMGMk"
+      },
+      {
+        "name": "Hip Circles",
+        "duration": "10 reps each direction/side",
+        "note": "Full hip joint mobilisation",
+        "gif": "https://i.ytimg.com/vi/jUft857xWzw/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=jUft857xWzw"
+      },
+      {
+        "name": "Inchworms",
+        "duration": "2×10 reps",
+        "note": "Full-body dynamic warmup — hamstrings, glutes, core, and shoulders",
+        "gif": "https://i.ytimg.com/vi/o5owhd6Eg5o/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=o5owhd6Eg5o"
+      },
+      {
+        "name": "Bodyweight Squat",
+        "duration": "2×15 reps (slow, full depth)",
+        "note": "Rehearse the squat pattern before adding load",
+        "gif": "https://i.ytimg.com/vi/eFEVKmp3M4g/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=eFEVKmp3M4g"
+      }
+    ],
+    "activation": [],
+    "cooldown": [
+      {
+        "name": "Standing Quad Stretch",
+        "duration": "60s each leg",
+        "note": "Essential after heavy quad work",
+        "gif": "https://i.ytimg.com/vi/ZKMYmIqnzrU/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=ZKMYmIqnzrU"
+      },
+      {
+        "name": "Lying Hamstring Stretch (strap/towel)",
+        "duration": "60s each leg",
+        "note": "Lengthen hamstrings fully after RDL and leg curl",
+        "gif": "https://i.ytimg.com/vi/4dnFltSP-tM/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=4dnFltSP-tM"
+      },
+      {
+        "name": "Pigeon Pose",
+        "duration": "90s each side",
+        "note": "Deep glute and piriformis stretch — reduces lower back tightness",
+        "gif": "https://i.ytimg.com/vi/AI5A1PRYX7E/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=AI5A1PRYX7E"
+      },
+      {
+        "name": "Hip Flexor Lunge Stretch (low lunge)",
+        "duration": "60s each side",
+        "note": "Release hip flexors compressed during squats and split squats",
+        "gif": "https://i.ytimg.com/vi/EVcnudMqQCE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=EVcnudMqQCE"
+      },
+      {
+        "name": "Standing Calf Stretch (wall)",
+        "duration": "45s each leg (bent + straight knee)",
+        "note": "Stretch both gastrocnemius and soleus",
+        "gif": "https://i.ytimg.com/vi/7SO6QzfBRaE/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=7SO6QzfBRaE"
+      },
+      {
+        "name": "Lower Back Child's Pose",
+        "duration": "60s",
+        "note": "Decompress lumbar spine after loaded squats",
+        "gif": "https://i.ytimg.com/vi/1ygQrW_0MZY/hqdefault.jpg",
+        "youtube": "https://www.youtube.com/watch?v=1ygQrW_0MZY"
+      }
+    ]
+  }
+}

@@ -30,7 +30,7 @@ function History() {
         );
 
     const totalVolume = logs.reduce(
-        (sum, log) => sum + log.sets.reduce((s, set) => s + set.weight * set.reps, 0),
+        (sum, log) => sum + (log.sets ?? []).reduce((s, set) => s + (set.weight ?? 0) * (set.reps ?? 0), 0),
         0
     );
 
@@ -116,7 +116,7 @@ function History() {
                 {filtered.map((log, idx) => {
                     const type = getExerciseType(log.exercise);
                     const color = dayTypeColors[type];
-                    const vol = log.sets.reduce((s, set) => s + set.weight * set.reps, 0);
+                    const vol = (log.sets ?? []).reduce((s, set) => s + (set.weight ?? 0) * (set.reps ?? 0), 0);
                     return (
                         <div
                             key={idx}
@@ -133,7 +133,7 @@ function History() {
                                 <div style={{ fontSize: 12, color: '#6b7280' }}>{log.date}</div>
                             </div>
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 8 }}>
-                                {log.sets.map((set, i) => (
+                                {(log.sets ?? []).map((set, i) => (
                                     <span
                                         key={i}
                                         style={{
@@ -142,13 +142,13 @@ function History() {
                                             fontSize: 13, color: '#d1d5db',
                                         }}
                                     >
-                                        Set {i + 1}: {set.weight}kg × {set.reps}
+                                        Set {i + 1}: {set.weight ?? 0}kg × {set.reps ?? 0}
                                     </span>
                                 ))}
                             </div>
                             <div style={{ fontSize: 12, color: '#9ca3af' }}>
                                 Volume: <span style={{ color: '#a78bfa', fontWeight: 600 }}>{vol} kg·reps</span>
-                                <span style={{ marginLeft: 12 }}>{log.sets.length} sets</span>
+                                <span style={{ marginLeft: 12 }}>{(log.sets ?? []).length} sets</span>
                             </div>
                         </div>
                     );

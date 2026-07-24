@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import workoutData from '../data/workoutData.json';
+import workoutDataV1 from '../data/workoutData.json';
+import workoutDataV2 from '../data/workoutDataV2.json';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useLastWeight } from '../hooks/useLastWeight';
+
+// Search all lifting days across both plans for exercise metadata
+const V1_LIFTING_KEYS = ['push1', 'pull1', 'legs1', 'push2', 'pull2', 'legs2'];
+const V2_LIFTING_KEYS = ['push1', 'pull1', 'push2', 'pull2', 'legs1'];
 
 function LogWorkout() {
     const { exercise } = useParams();
@@ -12,9 +17,10 @@ function LogWorkout() {
     const [sets, setSets] = useState([{ weight: '', reps: '' }]);
     const lastWeight = useLastWeight(exercise);
 
-    const exerciseData = ['push1', 'pull1', 'legs1', 'push2', 'pull2', 'legs2']
-        .flatMap(k => workoutData[k].exercises)
-        .find((ex) => ex.name === exercise);
+    // Look up exercise metadata from both v1 and v2 (whichever matches first)
+    const exerciseData =
+        V1_LIFTING_KEYS.flatMap(k => workoutDataV1[k]?.exercises ?? []).find(ex => ex.name === exercise) ||
+        V2_LIFTING_KEYS.flatMap(k => workoutDataV2[k]?.exercises ?? []).find(ex => ex.name === exercise && !ex.duration);
 
     const handleSetChange = (idx, field, value) => {
         setSets((prev) =>

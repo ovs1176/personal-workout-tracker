@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
-import workoutData from '../data/workoutData.json';
+import workoutDataV1 from '../data/workoutData.json';
+import workoutDataV2 from '../data/workoutDataV2.json';
 import {
     LineChart, Line, XAxis, YAxis, CartesianGrid,
     Tooltip, Legend, BarChart, Bar, ResponsiveContainer,
 } from 'recharts';
 
-const allExercises = ['push1', 'pull1', 'legs1', 'push2', 'pull2', 'legs2']
-    .flatMap(k => workoutData[k].exercises)
-    .map((e) => e.name);
+// Combine exercises from both v1 and v2, deduplicate, exclude cardio items (no sets/reps)
+const allExercises = [...new Set([
+    ...['push1', 'pull1', 'legs1', 'push2', 'pull2', 'legs2']
+        .flatMap(k => workoutDataV1[k]?.exercises ?? [])
+        .map(e => e.name),
+    ...['push1', 'pull1', 'push2', 'pull2', 'legs1']
+        .flatMap(k => workoutDataV2[k]?.exercises ?? [])
+        .filter(e => !e.duration) // exclude CardioItems from running day
+        .map(e => e.name),
+])];
 
 const chartStyle = {
     backgroundColor: '#111827', border: '1px solid #374151',
@@ -21,7 +29,7 @@ const tooltipStyle = { backgroundColor: '#1f2937', border: '1px solid #374151', 
 
 function Progress() {
     const [logs] = useLocalStorage('workoutLogs', []);
-    const [selectedExercise, setSelectedExercise] = useState('Barbell Bench Press');
+    const [selectedExercise, setSelectedExercise] = useState(allExercises[0] ?? '');
 
     // Selected exercise weight progression
     const exerciseLogs = logs.filter((log) => log.exercise === selectedExercise);

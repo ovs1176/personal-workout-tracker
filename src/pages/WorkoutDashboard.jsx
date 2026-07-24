@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import workoutData from '../data/workoutData.json';
+import React, { useState } from 'react';
+import workoutDataV1 from '../data/workoutData.json';
+import workoutDataV2 from '../data/workoutDataV2.json';
 import ExerciseCard from '../components/ExerciseCard';
+import RunCard from '../components/RunCard';
 
 function getTypeColor(type) {
     if (!type || type === 'rest') return '#374151';
     if (type.startsWith('push')) return '#7c3aed';
     if (type.startsWith('pull')) return '#2563eb';
-    return '#059669';
+    if (type.startsWith('running')) return '#f97316';
+    if (type.startsWith('legs')) return '#059669';
+    return '#374151';
 }
 
 function SectionItemImg({ src, name }) {
@@ -28,7 +32,90 @@ function SectionItemImg({ src, name }) {
     );
 }
 
-function CollapsibleSection({ title, icon, color, bgColor, items, defaultOpen = false }) {
+function SectionCard({ item, color }) {
+    const [imgError, setImgError] = React.useState(false);
+    return (
+        <div style={{
+            backgroundColor: '#1f2937',
+            border: `1px solid ${color}33`,
+            borderRadius: 14,
+            overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.25)',
+        }}>
+            {imgError || !item.gif ? (
+                <div style={{
+                    width: '100%',
+                    height: 170,
+                    background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 8,
+                    padding: 16,
+                    textAlign: 'center',
+                    color: '#9ca3af',
+                }}>
+                    <div style={{ fontSize: 32 }}>🏋️</div>
+                    <div style={{ fontSize: 14, fontWeight: 700 }}>{item.name}</div>
+                </div>
+            ) : (
+                <img
+                    src={item.gif}
+                    alt={item.name}
+                    onError={() => setImgError(true)}
+                    style={{ width: '100%', height: 170, objectFit: 'cover', backgroundColor: '#111827' }}
+                />
+            )}
+            <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
+                    <div style={{ fontSize: 15, fontWeight: 700, color: '#f9fafb', flex: 1, minWidth: 0 }}>{item.name}</div>
+                    {item.duration && (
+                        <span style={{
+                            fontSize: 11,
+                            fontWeight: 700,
+                            color: color,
+                            backgroundColor: color + '22',
+                            padding: '5px 10px',
+                            borderRadius: 999,
+                            whiteSpace: 'nowrap',
+                        }}>
+                            ⏱ {item.duration}
+                        </span>
+                    )}
+                </div>
+                {item.note && (
+                    <div style={{ fontSize: 12, color: '#9ca3af', lineHeight: 1.5 }}>{item.note}</div>
+                )}
+                {item.youtube && (
+                    <a
+                        href={item.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            padding: '10px 0',
+                            borderRadius: 10,
+                            backgroundColor: '#dc2626',
+                            color: '#fff',
+                            textDecoration: 'none',
+                            fontSize: 13,
+                            fontWeight: 700,
+                        }}
+                    >
+                        ▶ Watch
+                    </a>
+                )}
+            </div>
+        </div>
+    );
+}
+
+function CollapsibleSection({ title, icon, color, bgColor, items, defaultOpen = false, useCardLayout = false }) {
     const [open, setOpen] = useState(defaultOpen);
     return (
         <div style={{ marginBottom: 20, borderRadius: 12, overflow: 'hidden', border: `1px solid ${color}44` }}>
@@ -51,48 +138,60 @@ function CollapsibleSection({ title, icon, color, bgColor, items, defaultOpen = 
                 <span style={{ fontSize: 16, color: color, transition: 'transform 0.2s', display: 'inline-block', transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}>▼</span>
             </button>
             {open && (
-                <div style={{ backgroundColor: '#111827' }}>
-                    {items.map((item, i) => (
-                        <div key={i} style={{
-                            display: 'flex', alignItems: 'flex-start', gap: 12,
-                            padding: '12px 16px',
-                            borderTop: '1px solid #1f2937',
+                <div style={{ backgroundColor: '#111827', padding: useCardLayout ? '16px' : '0' }}>
+                    {useCardLayout ? (
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                            gap: 18,
                         }}>
-                            <div style={{
-                                minWidth: 26, height: 26, borderRadius: '50%',
-                                backgroundColor: color + '22', color: color,
-                                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                fontSize: 12, fontWeight: 700, flexShrink: 0, marginTop: 1,
-                            }}>{i + 1}</div>
-                            <SectionItemImg src={item.gif} name={item.name} />
-                            <div style={{ flex: 1, minWidth: 0 }}>
-                                <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 8 }}>
-                                    <span style={{ fontSize: 13, fontWeight: 600, color: '#f9fafb' }}>{item.name}</span>
-                                    <span style={{
-                                        fontSize: 11, fontWeight: 600, color: color,
-                                        backgroundColor: color + '18', padding: '1px 8px', borderRadius: 20, whiteSpace: 'nowrap',
-                                    }}>{item.duration}</span>
-                                </div>
-                                {item.note && (
-                                    <div style={{ fontSize: 11, color: '#6b7280', marginTop: 3, lineHeight: 1.4 }}>💡 {item.note}</div>
-                                )}
-                                {item.youtube && (
-                                    <a
-                                        href={item.youtube}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        style={{
-                                            display: 'inline-flex', alignItems: 'center', gap: 5,
-                                            marginTop: 6, padding: '4px 10px',
-                                            backgroundColor: '#dc2626', color: '#fff',
-                                            borderRadius: 6, textDecoration: 'none',
-                                            fontSize: 11, fontWeight: 600,
-                                        }}
-                                    >▶ Watch</a>
-                                )}
-                            </div>
+                            {items.map((item, i) => (
+                                <SectionCard key={i} item={item} color={color} />
+                            ))}
                         </div>
-                    ))}
+                    ) : (
+                        items.map((item, i) => (
+                            <div key={i} style={{
+                                display: 'flex', alignItems: 'flex-start', gap: 12,
+                                padding: '12px 16px',
+                                borderTop: i > 0 ? '1px solid #1f2937' : 'none',
+                            }}>
+                                <div style={{
+                                    minWidth: 26, height: 26, borderRadius: '50%',
+                                    backgroundColor: color + '22', color: color,
+                                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                    fontSize: 12, fontWeight: 700, flexShrink: 0, marginTop: 1,
+                                }}>{i + 1}</div>
+                                <SectionItemImg src={item.gif} name={item.name} />
+                                <div style={{ flex: 1, minWidth: 0 }}>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 8 }}>
+                                        <span style={{ fontSize: 13, fontWeight: 600, color: '#f9fafb' }}>{item.name}</span>
+                                        <span style={{
+                                            fontSize: 11, fontWeight: 600, color: color,
+                                            backgroundColor: color + '18', padding: '1px 8px', borderRadius: 20, whiteSpace: 'nowrap',
+                                        }}>{item.duration}</span>
+                                    </div>
+                                    {item.note && (
+                                        <div style={{ fontSize: 11, color: '#6b7280', marginTop: 3, lineHeight: 1.4 }}>💡 {item.note}</div>
+                                    )}
+                                    {item.youtube && (
+                                        <a
+                                            href={item.youtube}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            style={{
+                                                display: 'inline-flex', alignItems: 'center', gap: 5,
+                                                marginTop: 6, padding: '4px 10px',
+                                                backgroundColor: '#dc2626', color: '#fff',
+                                                borderRadius: 6, textDecoration: 'none',
+                                                fontSize: 11, fontWeight: 600,
+                                            }}
+                                        >▶ Watch</a>
+                                    )}
+                                </div>
+                            </div>
+                        ))
+                    )}
                 </div>
             )}
         </div>
@@ -100,36 +199,82 @@ function CollapsibleSection({ title, icon, color, bgColor, items, defaultOpen = 
 }
 
 function WorkoutDashboard() {
-    const [activeTab, setActiveTab] = useState('push1');
-    const [mainWorkoutOpen, setMainWorkoutOpen] = useState(true);
-    const schedule = workoutData.schedule;
-    const visibleSchedule = schedule.filter((day) => day.day !== 7);
-    const dayData = workoutData[activeTab];
+    const [planVersion, setPlanVersion] = useState('v2');
+    const [activeTabV1, setActiveTabV1] = useState('push1');
+    const [activeTabV2, setActiveTabV2] = useState('push1');
 
-    useEffect(() => {
-        setMainWorkoutOpen(true);
-    }, [activeTab]);
+    const workoutData = planVersion === 'v1' ? workoutDataV1 : workoutDataV2;
+    const activeTab = planVersion === 'v1' ? activeTabV1 : activeTabV2;
+    const setActiveTab = planVersion === 'v1' ? setActiveTabV1 : setActiveTabV2;
+
+    const schedule = workoutData.schedule;
+    const dayData = workoutData[activeTab];
+    const isRunningDay = activeTab.startsWith('running');
+
+    const cardioCount = isRunningDay ? (dayData?.exercises?.filter(e => !e.isCore).length ?? 0) : 0;
+    const coreCount = isRunningDay ? (dayData?.exercises?.filter(e => e.isCore).length ?? 0) : 0;
 
     return (
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px' }}>
             {/* Header */}
-            <div style={{ marginBottom: 32 }}>
-                <h1 style={{ fontSize: 28, fontWeight: 800, color: '#f9fafb', margin: 0 }}>
-                    Workout Dashboard
-                </h1>
-                <p style={{ color: '#9ca3af', marginTop: 6, fontSize: 14 }}>
-                    Push Pull Legs • 6-day training plan
-                </p>
+            <div style={{ marginBottom: 24, display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
+                <div>
+                    <h1 style={{ fontSize: 28, fontWeight: 800, color: '#f9fafb', margin: 0 }}>
+                        Workout Dashboard
+                    </h1>
+                    <p style={{ color: '#9ca3af', marginTop: 6, fontSize: 14, margin: '6px 0 0' }}>
+                        {planVersion === 'v1'
+                            ? 'Push Pull Legs • 6-day training plan'
+                            : 'Push Pull Run • 7-day training plan'}
+                    </p>
+                </div>
+
+                {/* V1 / V2 Toggle */}
+                <div style={{
+                    display: 'flex', gap: 4,
+                    backgroundColor: '#111827', border: '1px solid #374151',
+                    borderRadius: 10, padding: 4,
+                }}>
+                    {['v1', 'v2'].map((v) => (
+                        <button
+                            key={v}
+                            onClick={() => setPlanVersion(v)}
+                            style={{
+                                padding: '8px 20px', borderRadius: 8, border: 'none',
+                                cursor: 'pointer', fontWeight: 700, fontSize: 13,
+                                transition: 'all 0.2s',
+                                backgroundColor: planVersion === v ? '#7c3aed' : 'transparent',
+                                color: planVersion === v ? '#fff' : '#9ca3af',
+                                boxShadow: planVersion === v ? '0 0 12px #7c3aed55' : 'none',
+                            }}
+                        >
+                            {v === 'v1' ? 'V1 — PPL' : 'V2 — PPR'}
+                        </button>
+                    ))}
+                </div>
+            </div>
+
+            {/* Plan badge */}
+            <div style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                backgroundColor: planVersion === 'v1' ? '#7c3aed22' : '#f9731622',
+                border: `1px solid ${planVersion === 'v1' ? '#7c3aed44' : '#f9731644'}`,
+                borderRadius: 8, padding: '6px 14px', marginBottom: 24, fontSize: 12,
+                color: planVersion === 'v1' ? '#a78bfa' : '#fb923c', fontWeight: 600,
+            }}>
+                {planVersion === 'v1'
+                    ? '💪 Push · Pull · Legs × 2 — Rest'
+                    : '🏃 Push · Pull · Run · Push · Pull · Legs — Rest'}
             </div>
 
             {/* Weekly Schedule Bar */}
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))',
+                gridTemplateColumns: `repeat(${schedule.length}, 1fr)`,
                 gap: 6,
                 marginBottom: 32,
             }}>
-                {visibleSchedule.map((d) => {
+                {schedule.map((d) => {
                     const isActive = d.type === activeTab;
                     const color = getTypeColor(d.type);
                     return (
@@ -149,11 +294,7 @@ function WorkoutDashboard() {
                             <div style={{ fontSize: 10, color: '#6b7280', fontWeight: 600, textTransform: 'uppercase', marginBottom: 2 }}>
                                 Day {d.day}
                             </div>
-                            <div style={{
-                                fontSize: 11,
-                                fontWeight: 700,
-                                color: d.type === 'rest' ? '#4b5563' : color,
-                            }}>
+                            <div style={{ fontSize: 11, fontWeight: 700, color: d.type === 'rest' ? '#4b5563' : color }}>
                                 {d.type === 'rest' ? '😴 Rest' : d.label}
                             </div>
                             {d.sublabel && d.type !== 'rest' && (
@@ -166,7 +307,7 @@ function WorkoutDashboard() {
                 })}
             </div>
 
-            {/* Active day info */}
+            {/* Active day info banner */}
             {dayData && (
                 <div style={{
                     backgroundColor: '#1f2937',
@@ -177,7 +318,7 @@ function WorkoutDashboard() {
                 }}>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, flexWrap: 'wrap' }}>
                         <h2 style={{ fontSize: 20, fontWeight: 800, color: '#f9fafb', margin: 0 }}>
-                            {dayData.title}
+                            {isRunningDay ? '🏃 ' : ''}{dayData.title}
                         </h2>
                         <span style={{ fontSize: 13, color: getTypeColor(activeTab), fontWeight: 600 }}>
                             {dayData.subtitle}
@@ -189,7 +330,14 @@ function WorkoutDashboard() {
                     <div style={{ display: 'flex', gap: 16, marginTop: 10, flexWrap: 'wrap' }}>
                         <span style={{ fontSize: 12, color: '#6b7280' }}>🔥 {dayData.warmup?.length ?? 0} warmup steps</span>
                         <span style={{ fontSize: 12, color: '#6b7280' }}>⚡ {dayData.activation?.length ?? 0} activation drills</span>
-                        <span style={{ fontSize: 12, color: '#6b7280' }}>💪 {dayData.exercises.length} exercises</span>
+                        {isRunningDay ? (
+                            <>
+                                <span style={{ fontSize: 12, color: '#6b7280' }}>🏃 {cardioCount} run segments</span>
+                                <span style={{ fontSize: 12, color: '#6b7280' }}>💪 {coreCount} core exercises</span>
+                            </>
+                        ) : (
+                            <span style={{ fontSize: 12, color: '#6b7280' }}>💪 {dayData.exercises.length} exercises</span>
+                        )}
                         <span style={{ fontSize: 12, color: '#6b7280' }}>🧘 {dayData.cooldown?.length ?? 0} cooldown stretches</span>
                     </div>
                 </div>
@@ -200,87 +348,74 @@ function WorkoutDashboard() {
                     {/* Pre-Workout Warmup */}
                     {dayData.warmup?.length > 0 && (
                         <CollapsibleSection
-                            title="Pre-Workout Warmup"
+                            title={isRunningDay ? 'Pre-Run Warmup' : 'Pre-Workout Warmup'}
                             icon="🔥"
                             color="#f97316"
                             bgColor="#1c1107"
                             items={dayData.warmup}
                             defaultOpen={false}
+                            useCardLayout={true}
                         />
                     )}
 
-                    {/* Muscle Activation */}
+                    {/* Muscle / Movement Activation */}
                     {dayData.activation?.length > 0 && (
                         <CollapsibleSection
-                            title="Muscle Activation"
+                            title={isRunningDay ? 'Movement Activation' : 'Muscle Activation'}
                             icon="⚡"
                             color="#22c55e"
                             bgColor="#071a0f"
                             items={dayData.activation}
                             defaultOpen={false}
+                            useCardLayout={true}
                         />
                     )}
 
-                    {/* Main Workout */}
+                    {/* Main Workout / Run */}
                     <div style={{ marginBottom: 24 }}>
-                        <div style={{ borderRadius: 12, overflow: 'hidden', border: `1px solid ${getTypeColor(activeTab)}44` }}>
-                            <button
-                                onClick={() => setMainWorkoutOpen((open) => !open)}
-                                style={{
-                                    width: '100%',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'space-between',
-                                    gap: 12,
-                                    padding: '12px 18px',
-                                    backgroundColor: '#1f2937',
-                                    border: 'none',
-                                    cursor: 'pointer',
-                                    textAlign: 'left',
-                                }}
-                            >
-                                <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
-                                    <span style={{ fontSize: 18 }}>💪</span>
-                                    <span style={{ fontSize: 15, fontWeight: 700, color: getTypeColor(activeTab) }}>
-                                        Main Workout
-                                    </span>
-                                    <span style={{
-                                        fontSize: 11, fontWeight: 600, color: getTypeColor(activeTab),
-                                        backgroundColor: getTypeColor(activeTab) + '22', padding: '2px 8px', borderRadius: 20,
-                                    }}>{dayData.exercises.length} exercises</span>
-                                </div>
-                                <span style={{
-                                    fontSize: 16,
-                                    color: getTypeColor(activeTab),
-                                    transition: 'transform 0.2s',
-                                    display: 'inline-block',
-                                    transform: mainWorkoutOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                                }}>▼</span>
-                            </button>
-                            {mainWorkoutOpen && (
-                                <div style={{
-                                    display: 'grid',
-                                    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-                                    gap: 20,
-                                    paddingTop: 16,
-                                }}>
-                                    {dayData.exercises.map((exercise) => (
-                                        <ExerciseCard key={exercise.name} exercise={exercise} />
-                                    ))}
-                                </div>
-                            )}
+                        <div style={{
+                            display: 'flex', alignItems: 'center', gap: 10,
+                            marginBottom: 16, padding: '12px 18px',
+                            backgroundColor: '#1f2937',
+                            borderRadius: 10,
+                            border: `1px solid ${getTypeColor(activeTab)}44`,
+                        }}>
+                            <span style={{ fontSize: 18 }}>{isRunningDay ? '🏃' : '💪'}</span>
+                            <span style={{ fontSize: 15, fontWeight: 700, color: getTypeColor(activeTab) }}>
+                                {isRunningDay ? 'Run + Core Circuit' : 'Main Workout'}
+                            </span>
+                            <span style={{
+                                fontSize: 11, fontWeight: 600, color: getTypeColor(activeTab),
+                                backgroundColor: getTypeColor(activeTab) + '22', padding: '2px 8px', borderRadius: 20,
+                            }}>
+                                {isRunningDay
+                                    ? `${cardioCount} run · ${coreCount} core`
+                                    : `${dayData.exercises.length} exercises`}
+                            </span>
+                        </div>
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                            gap: 20,
+                        }}>
+                            {dayData.exercises.map((exercise) => (
+                                isRunningDay
+                                    ? <RunCard key={exercise.name} exercise={exercise} />
+                                    : <ExerciseCard key={exercise.name} exercise={exercise} />
+                            ))}
                         </div>
                     </div>
 
                     {/* Post-Workout Cooldown */}
                     {dayData.cooldown?.length > 0 && (
                         <CollapsibleSection
-                            title="Post-Workout Cooldown & Stretching"
+                            title={isRunningDay ? 'Post-Run Cooldown & Stretching' : 'Post-Workout Cooldown & Stretching'}
                             icon="🧘"
                             color="#38bdf8"
                             bgColor="#071318"
                             items={dayData.cooldown}
                             defaultOpen={false}
+                            useCardLayout={true}
                         />
                     )}
                 </>
