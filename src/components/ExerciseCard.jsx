@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLastWeight } from '../hooks/useLastWeight';
 import { useCompletedExercises } from '../hooks/useCompletedExercises';
 
-function ExerciseCard({ exercise }) {
+function ExerciseCard({ exercise, planVersion }) {
     const lastWeight = useLastWeight(exercise.name);
     const today = new Date().toISOString().slice(0, 10);
     const completedExercises = useCompletedExercises(today);
@@ -66,8 +66,13 @@ function ExerciseCard({ exercise }) {
                 <div style={{ fontSize: 13, color: '#a78bfa', fontWeight: 600 }}>🎯 {exercise.target}</div>
                 <div style={{ display: 'flex', gap: 16, fontSize: 13, color: '#9ca3af', marginTop: 2 }}>
                     <span>📋 {exercise.sets} sets</span>
-                    <span>🔁 {exercise.reps} reps</span>
+                    <span>{exercise.duration || `${exercise.reps} reps`}</span>
                 </div>
+                {exercise.note && (
+                    <div style={{ fontSize: 12, color: '#9ca3af', lineHeight: 1.5 }}>
+                        {exercise.note}
+                    </div>
+                )}
                 {lastWeight !== null && (
                     <div style={{ fontSize: 13, color: '#34d399', fontWeight: 600 }}>Last: {lastWeight} kg</div>
                 )}
@@ -93,7 +98,7 @@ function ExerciseCard({ exercise }) {
                         ▶ YouTube
                     </a>
                     <Link
-                        to={`/log/${encodeURIComponent(exercise.name)}`}
+                        to={`/log/${encodeURIComponent(exercise.name)}${planVersion ? `?plan=${planVersion}` : ''}`}
                         style={{
                             flex: 1, textAlign: 'center',
                             padding: '8px 0', borderRadius: 8,

@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import workoutDataV1 from '../data/workoutData.json';
 import workoutDataV2 from '../data/workoutDataV2.json';
+import workoutDataV3 from '../data/workoutDataV3';
 import ExerciseCard from '../components/ExerciseCard';
 import RunCard from '../components/RunCard';
+import { useLocalStorage } from '../hooks/useLocalStorage';
+
+const plans = {
+    v3: { data: workoutDataV3, label: 'V3 - Body Part', description: 'Body-part split - Monday to Saturday', summary: 'Legs / Chest / Back / Triceps + Core / Biceps + Forearms / Shoulders / Rest' },
+    v1: { data: workoutDataV1, label: 'V1 - PPL', description: 'Push Pull Legs - 6-day training plan', summary: 'Push / Pull / Legs x 2 / Rest' },
+    v2: { data: workoutDataV2, label: 'V2 - PPR', description: 'Push Pull Run - 7-day training plan', summary: 'Push / Pull / Run / Push / Pull / Legs / Rest' },
+};
 
 function getTypeColor(type) {
     if (!type || type === 'rest') return '#374151';
@@ -10,6 +18,11 @@ function getTypeColor(type) {
     if (type.startsWith('pull')) return '#2563eb';
     if (type.startsWith('running')) return '#f97316';
     if (type.startsWith('legs')) return '#059669';
+    if (type === 'chest') return '#f472b6';
+    if (type === 'back') return '#38bdf8';
+    if (type === 'triceps') return '#fb923c';
+    if (type === 'biceps') return '#facc15';
+    if (type === 'shoulders') return '#2dd4bf';
     return '#374151';
 }
 
@@ -199,13 +212,13 @@ function CollapsibleSection({ title, icon, color, bgColor, items, defaultOpen = 
 }
 
 function WorkoutDashboard() {
-    const [planVersion, setPlanVersion] = useState('v2');
-    const [activeTabV1, setActiveTabV1] = useState('push1');
-    const [activeTabV2, setActiveTabV2] = useState('push1');
-
-    const workoutData = planVersion === 'v1' ? workoutDataV1 : workoutDataV2;
-    const activeTab = planVersion === 'v1' ? activeTabV1 : activeTabV2;
-    const setActiveTab = planVersion === 'v1' ? setActiveTabV1 : setActiveTabV2;
+    const [savedPlanVersion, setPlanVersion] = useLocalStorage('workoutPlanVersion', 'v3');
+    const planVersion = Object.hasOwn(plans, savedPlanVersion) ? savedPlanVersion : 'v3';
+    const [activeTabs, setActiveTabs] = useState({ v1: 'push1', v2: 'push1', v3: 'legs' });
+    const plan = plans[planVersion];
+    const workoutData = plan.data;
+    const activeTab = activeTabs[planVersion];
+    const setActiveTab = (tab) => setActiveTabs(previous => ({ ...previous, [planVersion]: tab }));
 
     const schedule = workoutData.schedule;
     const dayData = workoutData[activeTab];
@@ -223,32 +236,31 @@ function WorkoutDashboard() {
                         Workout Dashboard
                     </h1>
                     <p style={{ color: '#9ca3af', marginTop: 6, fontSize: 14, margin: '6px 0 0' }}>
-                        {planVersion === 'v1'
-                            ? 'Push Pull Legs • 6-day training plan'
-                            : 'Push Pull Run • 7-day training plan'}
+                        {plan.description}
                     </p>
                 </div>
 
                 {/* V1 / V2 Toggle */}
                 <div style={{
-                    display: 'flex', gap: 4,
+                    display: 'flex', gap: 4, flexWrap: 'wrap', maxWidth: '100%',
                     backgroundColor: '#111827', border: '1px solid #374151',
                     borderRadius: 10, padding: 4,
                 }}>
-                    {['v1', 'v2'].map((v) => (
+                    {Object.keys(plans).map((version) => (
                         <button
-                            key={v}
-                            onClick={() => setPlanVersion(v)}
+                            key={version}
+                            onClick={() => setPlanVersion(version)}
+                            aria-pressed={planVersion === version}
                             style={{
-                                padding: '8px 20px', borderRadius: 8, border: 'none',
+                                padding: '8px 12px', borderRadius: 8, border: 'none',
                                 cursor: 'pointer', fontWeight: 700, fontSize: 13,
                                 transition: 'all 0.2s',
-                                backgroundColor: planVersion === v ? '#7c3aed' : 'transparent',
-                                color: planVersion === v ? '#fff' : '#9ca3af',
-                                boxShadow: planVersion === v ? '0 0 12px #7c3aed55' : 'none',
+                                backgroundColor: planVersion === version ? '#7c3aed' : 'transparent',
+                                color: planVersion === version ? '#fff' : '#9ca3af',
+                                boxShadow: planVersion === version ? '0 0 12px #7c3aed55' : 'none',
                             }}
                         >
-                            {v === 'v1' ? 'V1 — PPL' : 'V2 — PPR'}
+                            {plans[version].label}
                         </button>
                     ))}
                 </div>
@@ -262,15 +274,21 @@ function WorkoutDashboard() {
                 borderRadius: 8, padding: '6px 14px', marginBottom: 24, fontSize: 12,
                 color: planVersion === 'v1' ? '#a78bfa' : '#fb923c', fontWeight: 600,
             }}>
-                {planVersion === 'v1'
-                    ? '💪 Push · Pull · Legs × 2 — Rest'
-                    : '🏃 Push · Pull · Run · Push · Pull · Legs — Rest'}
+                {plan.summary}
             </div>
+
+            {planVersion === 'v3' && (
+                <p style={{ color: '#9ca3af', fontSize: 13, lineHeight: 1.6, margin: '0 0 24px' }}>
+                    60 minutes lifting + 20 minutes warm-up and cooldown. Target 4 sets of 20 reps;
+                    planks use timed holds. These days contain 20-28 working sets and may exceed
+                    60 minutes. Reduce volume rather than rushing rests or sacrificing technique.
+                </p>
+            )}
 
             {/* Weekly Schedule Bar */}
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: `repeat(${schedule.length}, 1fr)`,
+                gridTemplateColumns: `repeat(${schedule.length}, minmax(0, 1fr))`,
                 gap: 6,
                 marginBottom: 32,
             }}>
@@ -278,21 +296,28 @@ function WorkoutDashboard() {
                     const isActive = d.type === activeTab;
                     const color = getTypeColor(d.type);
                     return (
-                        <div
+                        <button
                             key={d.day}
+                            type="button"
+                            title={d.weekday || `Day ${d.day}`}
+                            aria-pressed={isActive}
+                            disabled={d.type === 'rest'}
                             onClick={() => d.type !== 'rest' && setActiveTab(d.type)}
                             style={{
                                 backgroundColor: isActive ? color + '22' : d.type === 'rest' ? '#111827' : '#1f2937',
                                 border: `1px solid ${isActive ? color : '#374151'}`,
                                 borderRadius: 8,
                                 padding: '8px 4px',
+                                minWidth: 0,
+                                overflowWrap: 'anywhere',
+                                fontFamily: 'inherit',
                                 textAlign: 'center',
                                 cursor: d.type !== 'rest' ? 'pointer' : 'default',
                                 transition: 'all 0.2s',
                             }}
                         >
                             <div style={{ fontSize: 10, color: '#6b7280', fontWeight: 600, textTransform: 'uppercase', marginBottom: 2 }}>
-                                Day {d.day}
+                                {d.weekday ? d.weekday.slice(0, 3) : `Day ${d.day}`}
                             </div>
                             <div style={{ fontSize: 11, fontWeight: 700, color: d.type === 'rest' ? '#4b5563' : color }}>
                                 {d.type === 'rest' ? '😴 Rest' : d.label}
@@ -302,7 +327,7 @@ function WorkoutDashboard() {
                                     {d.sublabel}
                                 </div>
                             )}
-                        </div>
+                        </button>
                     );
                 })}
             </div>
@@ -401,7 +426,7 @@ function WorkoutDashboard() {
                             {dayData.exercises.map((exercise) => (
                                 isRunningDay
                                     ? <RunCard key={exercise.name} exercise={exercise} />
-                                    : <ExerciseCard key={exercise.name} exercise={exercise} />
+                                    : <ExerciseCard key={`${planVersion}-${exercise.name}`} exercise={exercise} planVersion={planVersion} />
                             ))}
                         </div>
                     </div>

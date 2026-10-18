@@ -1,26 +1,33 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import workoutDataV1 from '../data/workoutData.json';
 import workoutDataV2 from '../data/workoutDataV2.json';
+import workoutDataV3 from '../data/workoutDataV3';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useLastWeight } from '../hooks/useLastWeight';
 
-// Search all lifting days across both plans for exercise metadata
 const V1_LIFTING_KEYS = ['push1', 'pull1', 'legs1', 'push2', 'pull2', 'legs2'];
 const V2_LIFTING_KEYS = ['push1', 'pull1', 'push2', 'pull2', 'legs1'];
+const exercisesByPlan = {
+    v1: V1_LIFTING_KEYS.flatMap(key => workoutDataV1[key]?.exercises ?? []),
+    v2: V2_LIFTING_KEYS.flatMap(key => workoutDataV2[key]?.exercises ?? []),
+    v3: workoutDataV3.schedule.flatMap(day => workoutDataV3[day.type]?.exercises ?? []),
+};
 
 function LogWorkout() {
     const { exercise } = useParams();
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const planVersion = searchParams.get('plan');
+    const exerciseData = (
+        Object.hasOwn(exercisesByPlan, planVersion) ? exercisesByPlan[planVersion] : Object.values(exercisesByPlan).flat()
+    ).find(item => item.name === exercise);
     const [logs, setLogs] = useLocalStorage('workoutLogs', []);
     const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
-    const [sets, setSets] = useState([{ weight: '', reps: '' }]);
+    const [sets, setSets] = useState(() => planVersion === 'v3' && exerciseData
+        ? Array.from({ length: exerciseData.sets }, () => ({ weight: '', reps: exerciseData.reps }))
+        : [{ weight: '', reps: '' }]);
     const lastWeight = useLastWeight(exercise);
-
-    // Look up exercise metadata from both v1 and v2 (whichever matches first)
-    const exerciseData =
-        V1_LIFTING_KEYS.flatMap(k => workoutDataV1[k]?.exercises ?? []).find(ex => ex.name === exercise) ||
-        V2_LIFTING_KEYS.flatMap(k => workoutDataV2[k]?.exercises ?? []).find(ex => ex.name === exercise && !ex.duration);
 
     const handleSetChange = (idx, field, value) => {
         setSets((prev) =>
@@ -74,7 +81,7 @@ function LogWorkout() {
                 </h2>
                 {exerciseData && (
                     <div style={{ color: '#a78bfa', fontSize: 13, marginBottom: 16 }}>
-                        🎯 {exerciseData.target} • {exerciseData.sets} sets × {exerciseData.reps} reps
+                        {exerciseData.target} - {exerciseData.sets} sets x {exerciseData.duration || `${exerciseData.reps} reps`}
                     </div>
                 )}
                 {lastWeight !== null && (
