@@ -19,7 +19,7 @@ A React workout tracker for Push Pull Legs training plan. All data is stored loc
 - src/data
 - src/hooks
 - src/utils
-- src/charts
+- src/charts 
 
 ## Getting Started
 1. Install dependencies:
